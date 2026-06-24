@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|d:\\tup\\programacion i - logica\\tareas\\mayorista\\presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\negocio\\direccioncliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\direccioncliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\negocio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\negocio\\mayoristaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\mayoristaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\datos\\mayoristadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:datos\\mayoristadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmCliente.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmCliente.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmCliente.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmCliente.cs",
+              "RelativeToolTip": "Presentacion\\FrmCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T19:21:14.32Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmCliente.cs [Design]",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmCliente.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmCliente.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmCliente.cs [Design]",
+              "RelativeToolTip": "Presentacion\\FrmCliente.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T18:00:06.776Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MayoristaDao.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Datos\\MayoristaDao.cs",
+              "RelativeDocumentMoniker": "Datos\\MayoristaDao.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Datos\\MayoristaDao.cs",
+              "RelativeToolTip": "Datos\\MayoristaDao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T17:59:30.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MayoristaServicio.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\MayoristaServicio.cs",
+              "RelativeDocumentMoniker": "Negocio\\MayoristaServicio.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\MayoristaServicio.cs",
+              "RelativeToolTip": "Negocio\\MayoristaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T17:57:17.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DireccionCliente.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\DireccionCliente.cs",
+              "RelativeDocumentMoniker": "Negocio\\DireccionCliente.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\DireccionCliente.cs",
+              "RelativeToolTip": "Negocio\\DireccionCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T17:52:45.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\Cliente.cs",
+              "RelativeDocumentMoniker": "Negocio\\Cliente.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Negocio\\Cliente.cs",
+              "RelativeToolTip": "Negocio\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "Negocio",
+              "WhenOpened": "2026-06-22T17:52:32.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "FrmMayorista.cs",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmMayorista.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmMayorista.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmMayorista.cs",
+              "RelativeToolTip": "Presentacion\\FrmMayorista.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T04:31:11.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FrmMayorista.cs [Design]",
+              "DocumentMoniker": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmMayorista.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmMayorista.cs",
+              "ToolTip": "D:\\TUP\\Programacion I - Logica\\Tareas\\Mayorista\\Presentacion\\FrmMayorista.cs [Design]",
+              "RelativeToolTip": "Presentacion\\FrmMayorista.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-22T04:29:41.657Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

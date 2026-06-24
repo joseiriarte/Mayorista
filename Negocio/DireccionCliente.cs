@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mayorista.Negocio
+{
+    internal class DireccionCliente
+    {
+        private int id_cliente;
+        private int id_barrio;
+        private string direccion;
+        private string codigo_postal;
+
+        public int Id_cliente { get; set; }
+
+        public int Id_barrio { get; set; }
+
+        public string Direccion { get; set; }
+
+        public string Codigo_postal { get; set; }
+    }
+}
