@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mayorista.Negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace Mayorista
         {
             InitializeComponent();
         }
+
+
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {

@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.lblDomicilios = new System.Windows.Forms.Label();
+            this.dgvDomicilios = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.lblDomicilios = new System.Windows.Forms.Label();
             this.gbCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCliente
             // 
             this.gbCliente.Controls.Add(this.lblDomicilios);
-            this.gbCliente.Controls.Add(this.dataGridView2);
-            this.gbCliente.Controls.Add(this.dataGridView1);
+            this.gbCliente.Controls.Add(this.dgvDomicilios);
+            this.gbCliente.Controls.Add(this.dgvClientes);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.txtCliente);
             this.gbCliente.Controls.Add(this.lblCliente);
@@ -54,24 +54,33 @@
             this.gbCliente.TabIndex = 0;
             this.gbCliente.TabStop = false;
             // 
-            // dataGridView2
+            // lblDomicilios
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(30, 321);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 4;
+            this.lblDomicilios.AutoSize = true;
+            this.lblDomicilios.Location = new System.Drawing.Point(30, 287);
+            this.lblDomicilios.Name = "lblDomicilios";
+            this.lblDomicilios.Size = new System.Drawing.Size(54, 13);
+            this.lblDomicilios.TabIndex = 5;
+            this.lblDomicilios.Text = "Domicilios";
             // 
-            // dataGridView1
+            // dgvDomicilios
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvDomicilios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDomicilios.Location = new System.Drawing.Point(30, 321);
+            this.dgvDomicilios.Name = "dgvDomicilios";
+            this.dgvDomicilios.Size = new System.Drawing.Size(240, 150);
+            this.dgvDomicilios.TabIndex = 4;
+            // 
+            // dgvClientes
+            // 
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Location = new System.Drawing.Point(30, 86);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.Size = new System.Drawing.Size(456, 150);
+            this.dgvClientes.TabIndex = 3;
             // 
             // btnBuscarCliente
             // 
@@ -81,6 +90,7 @@
             this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtCliente
             // 
@@ -98,15 +108,6 @@
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente / Razón Social";
             // 
-            // lblDomicilios
-            // 
-            this.lblDomicilios.AutoSize = true;
-            this.lblDomicilios.Location = new System.Drawing.Point(30, 287);
-            this.lblDomicilios.Name = "lblDomicilios";
-            this.lblDomicilios.Size = new System.Drawing.Size(54, 13);
-            this.lblDomicilios.TabIndex = 5;
-            this.lblDomicilios.Text = "Domicilios";
-            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,8 +118,8 @@
             this.Text = "Clientes";
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -129,8 +130,8 @@
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDomicilios;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Label lblDomicilios;
     }
 }
