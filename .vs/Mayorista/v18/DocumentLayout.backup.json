@@ -1,0 +1,170 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\datos\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:datos\\parametro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\datos\\mayoristadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:datos\\mayoristadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:datos\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\negocio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\negocio\\direccioncliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\direccioncliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\negocio\\mayoristaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:negocio\\mayoristaservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\presentacion\\frmintegrantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmintegrantes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|c:\\users\\usuario\\documents\\github\\mayorista\\presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D599E6AE-1253-4FE4-BA1C-4EFE359392E6}|Mayorista.csproj|solutionrelative:presentacion\\frmmayorista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "FrmMayorista.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmMayorista.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmMayorista.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmMayorista.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\FrmMayorista.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:23.887Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "FrmIntegrantes.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmIntegrantes.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmIntegrantes.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmIntegrantes.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\FrmIntegrantes.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:23.011Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FrmCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmCliente.cs",
+              "RelativeDocumentMoniker": "Presentacion\\FrmCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Presentacion\\FrmCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentacion\\FrmCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:21.851Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MayoristaServicio.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\MayoristaServicio.cs",
+              "RelativeDocumentMoniker": "Negocio\\MayoristaServicio.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\MayoristaServicio.cs",
+              "RelativeToolTip": "Negocio\\MayoristaServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:18.679Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DireccionCliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\DireccionCliente.cs",
+              "RelativeDocumentMoniker": "Negocio\\DireccionCliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\DireccionCliente.cs",
+              "RelativeToolTip": "Negocio\\DireccionCliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:18.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\Cliente.cs",
+              "RelativeDocumentMoniker": "Negocio\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Negocio\\Cliente.cs",
+              "RelativeToolTip": "Negocio\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:17.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Parametro.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\Parametro.cs",
+              "RelativeDocumentMoniker": "Datos\\Parametro.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\Parametro.cs",
+              "RelativeToolTip": "Datos\\Parametro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:16.144Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MayoristaDao.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\MayoristaDao.cs",
+              "RelativeDocumentMoniker": "Datos\\MayoristaDao.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\MayoristaDao.cs",
+              "RelativeToolTip": "Datos\\MayoristaDao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:15.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Datos\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\Usuario\\Documents\\GitHub\\Mayorista\\Datos\\AccesoDatos.cs",
+              "RelativeToolTip": "Datos\\AccesoDatos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-24T21:00:09.052Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
