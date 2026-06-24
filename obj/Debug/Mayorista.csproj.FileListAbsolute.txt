@@ -10,3 +10,15 @@ D:\TUP\Programacion I - Logica\Tareas\Mayorista\obj\Debug\Mayorista.pdb
 D:\TUP\Programacion I - Logica\Tareas\Mayorista\obj\Debug\Mayorista.exe.config
 D:\TUP\Programacion I - Logica\Tareas\Mayorista\obj\Debug\Mayorista.FrmMayorista.resources
 D:\TUP\Programacion I - Logica\Tareas\Mayorista\obj\Debug\Mayorista.Presentacion.FrmCliente.resources
+C:\Users\Usuario\Documents\GitHub\Mayorista\bin\Debug\Mayorista.exe.config
+C:\Users\Usuario\Documents\GitHub\Mayorista\bin\Debug\Mayorista.exe
+C:\Users\Usuario\Documents\GitHub\Mayorista\bin\Debug\Mayorista.pdb
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.Presentacion.FrmCliente.resources
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.FrmMayorista.resources
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.Properties.Resources.resources
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.exe
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.pdb
+C:\Users\Usuario\Documents\GitHub\Mayorista\obj\Debug\Mayorista.Presentacion.FrmIntegrantes.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mayorista.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,5 +23,16 @@ namespace Mayorista
             if(MessageBox.Show("¿Seguro que desea salir de la aplicación?","SALIENDO", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes) { this.Close(); }
         }
 
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente Fc = new FrmCliente();
+            Fc.ShowDialog();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmIntegrantes Fi = new FrmIntegrantes();
+            Fi.ShowDialog();
+        }
     }
 }
