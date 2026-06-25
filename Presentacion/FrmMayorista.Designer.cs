@@ -37,6 +37,10 @@
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consulta4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +49,7 @@
             this.menuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1400, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,7 +62,7 @@
             this.acercaDeToolStripMenuItem});
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(1400, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip2.TabIndex = 1;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -73,7 +77,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -94,6 +98,11 @@
             // 
             // consultasToolStripMenuItem
             // 
+            this.consultasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.consulta1ToolStripMenuItem,
+            this.consulta2ToolStripMenuItem,
+            this.consulta3ToolStripMenuItem,
+            this.consulta4ToolStripMenuItem});
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
@@ -105,6 +114,34 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
+            // consulta1ToolStripMenuItem
+            // 
+            this.consulta1ToolStripMenuItem.Name = "consulta1ToolStripMenuItem";
+            this.consulta1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consulta1ToolStripMenuItem.Text = "Consulta 1";
+            this.consulta1ToolStripMenuItem.Click += new System.EventHandler(this.consulta1ToolStripMenuItem_Click);
+            // 
+            // consulta2ToolStripMenuItem
+            // 
+            this.consulta2ToolStripMenuItem.Name = "consulta2ToolStripMenuItem";
+            this.consulta2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consulta2ToolStripMenuItem.Text = "Consulta 2";
+            this.consulta2ToolStripMenuItem.Click += new System.EventHandler(this.consulta2ToolStripMenuItem_Click);
+            // 
+            // consulta3ToolStripMenuItem
+            // 
+            this.consulta3ToolStripMenuItem.Name = "consulta3ToolStripMenuItem";
+            this.consulta3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consulta3ToolStripMenuItem.Text = "Consulta 3";
+            this.consulta3ToolStripMenuItem.Click += new System.EventHandler(this.consulta3ToolStripMenuItem_Click);
+            // 
+            // consulta4ToolStripMenuItem
+            // 
+            this.consulta4ToolStripMenuItem.Name = "consulta4ToolStripMenuItem";
+            this.consulta4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consulta4ToolStripMenuItem.Text = "Consulta 4";
+            this.consulta4ToolStripMenuItem.Click += new System.EventHandler(this.consulta4ToolStripMenuItem_Click);
+            // 
             // FrmMayorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,7 +149,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1400, 747);
+            this.ClientSize = new System.Drawing.Size(1370, 747);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.DoubleBuffered = true;
@@ -140,6 +177,10 @@
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consulta4ToolStripMenuItem;
     }
 }
 
