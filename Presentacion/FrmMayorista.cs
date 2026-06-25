@@ -34,5 +34,29 @@ namespace Mayorista
             FrmIntegrantes Fi = new FrmIntegrantes();
             Fi.ShowDialog();
         }
+
+        private void consulta1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta1 frmConsulta1 = new FrmConsulta1();
+            frmConsulta1.ShowDialog();
+        }
+
+        private void consulta2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta2 frmConsulta2 = new FrmConsulta2();
+            frmConsulta2.ShowDialog();
+        }
+
+        private void consulta3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta3 frmConsulta3 = new FrmConsulta3();
+            frmConsulta3.ShowDialog();
+        }
+
+        private void consulta4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmConsulta4 frmConsulta4 = new FrmConsulta4();
+            frmConsulta4.ShowDialog();
+        }
     }
 }

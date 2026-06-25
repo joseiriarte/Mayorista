@@ -24,5 +24,10 @@ namespace Mayorista.Negocio
         {
             return dao.RecuperarDomicilios(filtro);
         }
+
+        internal List<Cliente> TraerConsulta1()
+        {
+            return dao.RecuperarConsulta1();
+        }
     }
 }

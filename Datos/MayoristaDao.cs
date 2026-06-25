@@ -25,7 +25,7 @@ namespace Mayorista.Datos
             {
                 consultaSQL += " where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";
             }
-            DataTable tabla = db.ConsultarTabla(consultaSQL);
+            DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
                 Cliente oCliente = new Cliente();
@@ -41,6 +41,20 @@ namespace Mayorista.Datos
             return listaClientes;
         }
 
+        internal List<Cliente> RecuperarConsulta1()
+        {
+            List <Cliente> listaCliente1 = new List<Cliente>();
+            string consultaSQL = "select nombre from clientes c join facturas f on c.id_cliente= f.id_cliente join detalles_facturas d on d.nro_factura = f.nro_factura where apellido like '%ez' or nombre like '[d-m]%' group by c.id_cliente, apellido, nombre order by apellido, nombre";
+            DataTable tabla = db.ConsultarTabla(consultaSQL);
+            foreach(DataRow fila in tabla.Rows)
+            {
+                Cliente oCliente1 = new Cliente();
+                oCliente1.Nombre = (string)fila[0];
+                listaCliente1.Add(oCliente1);
+            }
+            return listaCliente1;
+        }
+
         internal List<DireccionCliente> RecuperarDomicilios(string filtro)
         {
             List<DireccionCliente> listaDomicilios = new List<DireccionCliente>();
@@ -49,7 +63,7 @@ namespace Mayorista.Datos
             {
                 consultaSQL += "from domicilios d join clientes c on d.id_cliente = c.id_cliente where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";
             }
-            DataTable tabla = db.ConsultarTabla(consultaSQL);
+            DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
                 DireccionCliente oDomicilio = new DireccionCliente();
