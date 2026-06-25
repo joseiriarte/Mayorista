@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mayorista.Negocio
 {
-    internal class Cliente
+    public class Cliente
     {
+        private int id_cliente;
         private int id_tipo_documento;
         private string nro_documento;
         private string nombre;
@@ -15,6 +16,11 @@ namespace Mayorista.Negocio
         private string email;
         private string telefono;
 
+        public int Id_cliente
+        {
+            get { return id_cliente; }
+            set { id_cliente = value; }
+        }
         public int Id_tipo_documento
         {
             get { return id_tipo_documento; }

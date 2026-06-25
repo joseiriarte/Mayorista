@@ -6,13 +6,15 @@ using System.Threading.Tasks;
 
 namespace Mayorista.Negocio
 {
-    internal class DireccionCliente
+    public class DireccionCliente
     {
+        private int id_direccion_cliente;
         private int id_cliente;
         private int id_barrio;
         private string direccion;
         private string codigo_postal;
 
+        public int Id_direccion_cliente { get; set; }
         public int Id_cliente { get; set; }
 
         public int Id_barrio { get; set; }

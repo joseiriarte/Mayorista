@@ -30,22 +30,28 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.gbCliente = new System.Windows.Forms.GroupBox();
+            this.btnEliminarDom = new System.Windows.Forms.Button();
+            this.btnEditarDom = new System.Windows.Forms.Button();
+            this.btnNuevoDom = new System.Windows.Forms.Button();
+            this.btnEliminarCl = new System.Windows.Forms.Button();
+            this.btnEditarCl = new System.Windows.Forms.Button();
+            this.btnNuevoCl = new System.Windows.Forms.Button();
             this.lblDomicilios = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDomicilios = new System.Windows.Forms.DataGridView();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.btnBuscarCliente = new System.Windows.Forms.Button();
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
-            this.btnNuevoCl = new System.Windows.Forms.Button();
-            this.btnEditarCl = new System.Windows.Forms.Button();
-            this.btnEliminarCl = new System.Windows.Forms.Button();
-            this.btnNuevoDom = new System.Windows.Forms.Button();
-            this.btnEditarDom = new System.Windows.Forms.Button();
-            this.btnEliminarDom = new System.Windows.Forms.Button();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCliente.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbCliente
@@ -57,8 +63,8 @@
             this.gbCliente.Controls.Add(this.btnEditarCl);
             this.gbCliente.Controls.Add(this.btnNuevoCl);
             this.gbCliente.Controls.Add(this.lblDomicilios);
-            this.gbCliente.Controls.Add(this.dataGridView2);
-            this.gbCliente.Controls.Add(this.dataGridView1);
+            this.gbCliente.Controls.Add(this.dgvDomicilios);
+            this.gbCliente.Controls.Add(this.dgvClientes);
             this.gbCliente.Controls.Add(this.btnBuscarCliente);
             this.gbCliente.Controls.Add(this.txtCliente);
             this.gbCliente.Controls.Add(this.lblCliente);
@@ -67,6 +73,60 @@
             this.gbCliente.Size = new System.Drawing.Size(533, 570);
             this.gbCliente.TabIndex = 0;
             this.gbCliente.TabStop = false;
+            // 
+            // btnEliminarDom
+            // 
+            this.btnEliminarDom.Location = new System.Drawing.Point(192, 477);
+            this.btnEliminarDom.Name = "btnEliminarDom";
+            this.btnEliminarDom.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarDom.TabIndex = 10;
+            this.btnEliminarDom.Text = "Eliminar";
+            this.btnEliminarDom.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarDom
+            // 
+            this.btnEditarDom.Location = new System.Drawing.Point(111, 477);
+            this.btnEditarDom.Name = "btnEditarDom";
+            this.btnEditarDom.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarDom.TabIndex = 9;
+            this.btnEditarDom.Text = "Editar";
+            this.btnEditarDom.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoDom
+            // 
+            this.btnNuevoDom.Location = new System.Drawing.Point(30, 477);
+            this.btnNuevoDom.Name = "btnNuevoDom";
+            this.btnNuevoDom.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevoDom.TabIndex = 1;
+            this.btnNuevoDom.Text = "Nuevo";
+            this.btnNuevoDom.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarCl
+            // 
+            this.btnEliminarCl.Location = new System.Drawing.Point(192, 242);
+            this.btnEliminarCl.Name = "btnEliminarCl";
+            this.btnEliminarCl.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminarCl.TabIndex = 8;
+            this.btnEliminarCl.Text = "Eliminar";
+            this.btnEliminarCl.UseVisualStyleBackColor = true;
+            // 
+            // btnEditarCl
+            // 
+            this.btnEditarCl.Location = new System.Drawing.Point(111, 242);
+            this.btnEditarCl.Name = "btnEditarCl";
+            this.btnEditarCl.Size = new System.Drawing.Size(75, 23);
+            this.btnEditarCl.TabIndex = 7;
+            this.btnEditarCl.Text = "Editar";
+            this.btnEditarCl.UseVisualStyleBackColor = true;
+            // 
+            // btnNuevoCl
+            // 
+            this.btnNuevoCl.Location = new System.Drawing.Point(30, 242);
+            this.btnNuevoCl.Name = "btnNuevoCl";
+            this.btnNuevoCl.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevoCl.TabIndex = 6;
+            this.btnNuevoCl.Text = "Nuevo";
+            this.btnNuevoCl.UseVisualStyleBackColor = true;
             // 
             // lblDomicilios
             // 
@@ -77,30 +137,41 @@
             this.lblDomicilios.TabIndex = 5;
             this.lblDomicilios.Text = "Domicilios";
             // 
-            // dataGridView2
+            // dgvDomicilios
             // 
-            this.dataGridView2.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(30, 321);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView2.TabIndex = 4;
+            this.dgvDomicilios.AllowUserToAddRows = false;
+            this.dgvDomicilios.AllowUserToDeleteRows = false;
+            this.dgvDomicilios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvDomicilios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDomicilios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCP,
+            this.ColumnDireccion});
+            this.dgvDomicilios.Location = new System.Drawing.Point(30, 321);
+            this.dgvDomicilios.Name = "dgvDomicilios";
+            this.dgvDomicilios.ReadOnly = true;
+            this.dgvDomicilios.Size = new System.Drawing.Size(464, 150);
+            this.dgvDomicilios.TabIndex = 4;
             // 
-            // dataGridView1
+            // dgvClientes
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(30, 86);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(456, 150);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvClientes.AllowUserToAddRows = false;
+            this.dgvClientes.AllowUserToDeleteRows = false;
+            this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumero,
+            this.ColumnNombre,
+            this.ColumnApellido,
+            this.ColumnTelefono});
+            this.dgvClientes.Location = new System.Drawing.Point(30, 86);
+            this.dgvClientes.Name = "dgvClientes";
+            this.dgvClientes.ReadOnly = true;
+            this.dgvClientes.Size = new System.Drawing.Size(464, 150);
+            this.dgvClientes.TabIndex = 3;
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(357, 33);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(365, 33);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(129, 23);
             this.btnBuscarCliente.TabIndex = 2;
@@ -111,7 +182,7 @@
             // 
             this.txtCliente.Location = new System.Drawing.Point(146, 35);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(205, 20);
+            this.txtCliente.Size = new System.Drawing.Size(213, 20);
             this.txtCliente.TabIndex = 1;
             // 
             // lblCliente
@@ -123,60 +194,6 @@
             this.lblCliente.TabIndex = 0;
             this.lblCliente.Text = "Cliente / Razón Social";
             // 
-            // btnNuevoCl
-            // 
-            this.btnNuevoCl.Location = new System.Drawing.Point(30, 242);
-            this.btnNuevoCl.Name = "btnNuevoCl";
-            this.btnNuevoCl.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevoCl.TabIndex = 6;
-            this.btnNuevoCl.Text = "Nuevo";
-            this.btnNuevoCl.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarCl
-            // 
-            this.btnEditarCl.Location = new System.Drawing.Point(111, 242);
-            this.btnEditarCl.Name = "btnEditarCl";
-            this.btnEditarCl.Size = new System.Drawing.Size(75, 23);
-            this.btnEditarCl.TabIndex = 7;
-            this.btnEditarCl.Text = "Editar";
-            this.btnEditarCl.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarCl
-            // 
-            this.btnEliminarCl.Location = new System.Drawing.Point(192, 242);
-            this.btnEliminarCl.Name = "btnEliminarCl";
-            this.btnEliminarCl.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarCl.TabIndex = 8;
-            this.btnEliminarCl.Text = "Eliminar";
-            this.btnEliminarCl.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevoDom
-            // 
-            this.btnNuevoDom.Location = new System.Drawing.Point(30, 477);
-            this.btnNuevoDom.Name = "btnNuevoDom";
-            this.btnNuevoDom.Size = new System.Drawing.Size(75, 23);
-            this.btnNuevoDom.TabIndex = 1;
-            this.btnNuevoDom.Text = "Nuevo";
-            this.btnNuevoDom.UseVisualStyleBackColor = true;
-            // 
-            // btnEditarDom
-            // 
-            this.btnEditarDom.Location = new System.Drawing.Point(111, 477);
-            this.btnEditarDom.Name = "btnEditarDom";
-            this.btnEditarDom.Size = new System.Drawing.Size(75, 23);
-            this.btnEditarDom.TabIndex = 9;
-            this.btnEditarDom.Text = "Editar";
-            this.btnEditarDom.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminarDom
-            // 
-            this.btnEliminarDom.Location = new System.Drawing.Point(192, 477);
-            this.btnEliminarDom.Name = "btnEliminarDom";
-            this.btnEliminarDom.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminarDom.TabIndex = 10;
-            this.btnEliminarDom.Text = "Eliminar";
-            this.btnEliminarDom.UseVisualStyleBackColor = true;
-            // 
             // btnAtras
             // 
             this.btnAtras.Location = new System.Drawing.Point(12, 658);
@@ -186,6 +203,45 @@
             this.btnAtras.Text = "<< Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // ColumnCP
+            // 
+            this.ColumnCP.HeaderText = "Código Postal";
+            this.ColumnCP.Name = "ColumnCP";
+            this.ColumnCP.ReadOnly = true;
+            // 
+            // ColumnDireccion
+            // 
+            this.ColumnDireccion.HeaderText = "Dirección";
+            this.ColumnDireccion.Name = "ColumnDireccion";
+            this.ColumnDireccion.ReadOnly = true;
+            this.ColumnDireccion.Width = 300;
+            // 
+            // ColumnNumero
+            // 
+            this.ColumnNumero.HeaderText = "Número";
+            this.ColumnNumero.Name = "ColumnNumero";
+            this.ColumnNumero.ReadOnly = true;
+            this.ColumnNumero.Width = 50;
+            // 
+            // ColumnNombre
+            // 
+            this.ColumnNombre.HeaderText = "Nombre";
+            this.ColumnNombre.Name = "ColumnNombre";
+            this.ColumnNombre.ReadOnly = true;
+            // 
+            // ColumnApellido
+            // 
+            this.ColumnApellido.HeaderText = "Apellido";
+            this.ColumnApellido.Name = "ColumnApellido";
+            this.ColumnApellido.ReadOnly = true;
+            // 
+            // ColumnTelefono
+            // 
+            this.ColumnTelefono.HeaderText = "Teléfono";
+            this.ColumnTelefono.Name = "ColumnTelefono";
+            this.ColumnTelefono.ReadOnly = true;
+            this.ColumnTelefono.Width = 150;
             // 
             // FrmCliente
             // 
@@ -201,8 +257,8 @@
             this.Text = "Clientes";
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -213,8 +269,8 @@
         private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label lblCliente;
         private System.Windows.Forms.Button btnBuscarCliente;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDomicilios;
+        private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Label lblDomicilios;
         private System.Windows.Forms.Button btnEliminarDom;
         private System.Windows.Forms.Button btnEditarDom;
@@ -223,5 +279,11 @@
         private System.Windows.Forms.Button btnEditarCl;
         private System.Windows.Forms.Button btnNuevoCl;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefono;
     }
 }
