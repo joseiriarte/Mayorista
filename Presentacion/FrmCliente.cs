@@ -22,17 +22,30 @@ namespace Mayorista.Presentacion
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            dgvClientes.Rows.Clear();
+            dgvDomicilios.Rows.Clear();
+
             List<Cliente> lista = new List<Cliente>();
 
             string filtro = string.Empty;
-            if(!string.IsNullOrEmpty(txtCliente.Text) )
-                filtro = txtCliente.Text.Trim();
+            if(!string.IsNullOrEmpty(txtCliente.Text))
+                filtro = txtCliente.Text;
 
             lista = servicio.TraerClientes(filtro);
 
             foreach (Cliente c in lista)
             {
-                dgvClientes.Rows.Add(c.Apellido, c.Nombre);
+                dgvClientes.Rows.Add(c.Id_cliente, c.Nombre, c.Apellido, c.Telefono);
+            }
+
+            List<DireccionCliente> listaD = new List<DireccionCliente>();
+            if (!string.IsNullOrEmpty(txtCliente.Text))
+                filtro = txtCliente.Text;
+            listaD = servicio.TraerDomicilios(filtro);
+
+            foreach (DireccionCliente d in listaD)
+            {
+                dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
             }
         }
 

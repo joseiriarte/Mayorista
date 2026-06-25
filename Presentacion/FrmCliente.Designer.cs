@@ -43,6 +43,12 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -133,11 +139,17 @@
             // 
             // dgvDomicilios
             // 
+            this.dgvDomicilios.AllowUserToAddRows = false;
+            this.dgvDomicilios.AllowUserToDeleteRows = false;
             this.dgvDomicilios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDomicilios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDomicilios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnCP,
+            this.ColumnDireccion});
             this.dgvDomicilios.Location = new System.Drawing.Point(30, 321);
             this.dgvDomicilios.Name = "dgvDomicilios";
-            this.dgvDomicilios.Size = new System.Drawing.Size(240, 150);
+            this.dgvDomicilios.ReadOnly = true;
+            this.dgvDomicilios.Size = new System.Drawing.Size(464, 150);
             this.dgvDomicilios.TabIndex = 4;
             // 
             // dgvClientes
@@ -146,15 +158,20 @@
             this.dgvClientes.AllowUserToDeleteRows = false;
             this.dgvClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnNumero,
+            this.ColumnNombre,
+            this.ColumnApellido,
+            this.ColumnTelefono});
             this.dgvClientes.Location = new System.Drawing.Point(30, 86);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.ReadOnly = true;
-            this.dgvClientes.Size = new System.Drawing.Size(456, 150);
+            this.dgvClientes.Size = new System.Drawing.Size(464, 150);
             this.dgvClientes.TabIndex = 3;
             // 
             // btnBuscarCliente
             // 
-            this.btnBuscarCliente.Location = new System.Drawing.Point(357, 33);
+            this.btnBuscarCliente.Location = new System.Drawing.Point(365, 33);
             this.btnBuscarCliente.Name = "btnBuscarCliente";
             this.btnBuscarCliente.Size = new System.Drawing.Size(129, 23);
             this.btnBuscarCliente.TabIndex = 2;
@@ -165,7 +182,7 @@
             // 
             this.txtCliente.Location = new System.Drawing.Point(146, 35);
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(205, 20);
+            this.txtCliente.Size = new System.Drawing.Size(213, 20);
             this.txtCliente.TabIndex = 1;
             // 
             // lblCliente
@@ -186,6 +203,45 @@
             this.btnAtras.Text = "<< Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
+            // ColumnCP
+            // 
+            this.ColumnCP.HeaderText = "Código Postal";
+            this.ColumnCP.Name = "ColumnCP";
+            this.ColumnCP.ReadOnly = true;
+            // 
+            // ColumnDireccion
+            // 
+            this.ColumnDireccion.HeaderText = "Dirección";
+            this.ColumnDireccion.Name = "ColumnDireccion";
+            this.ColumnDireccion.ReadOnly = true;
+            this.ColumnDireccion.Width = 300;
+            // 
+            // ColumnNumero
+            // 
+            this.ColumnNumero.HeaderText = "Número";
+            this.ColumnNumero.Name = "ColumnNumero";
+            this.ColumnNumero.ReadOnly = true;
+            this.ColumnNumero.Width = 50;
+            // 
+            // ColumnNombre
+            // 
+            this.ColumnNombre.HeaderText = "Nombre";
+            this.ColumnNombre.Name = "ColumnNombre";
+            this.ColumnNombre.ReadOnly = true;
+            // 
+            // ColumnApellido
+            // 
+            this.ColumnApellido.HeaderText = "Apellido";
+            this.ColumnApellido.Name = "ColumnApellido";
+            this.ColumnApellido.ReadOnly = true;
+            // 
+            // ColumnTelefono
+            // 
+            this.ColumnTelefono.HeaderText = "Teléfono";
+            this.ColumnTelefono.Name = "ColumnTelefono";
+            this.ColumnTelefono.ReadOnly = true;
+            this.ColumnTelefono.Width = 150;
             // 
             // FrmCliente
             // 
@@ -223,5 +279,11 @@
         private System.Windows.Forms.Button btnEditarCl;
         private System.Windows.Forms.Button btnNuevoCl;
         private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDireccion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnApellido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefono;
     }
 }
