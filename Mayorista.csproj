@@ -52,6 +52,12 @@
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\DireccionCliente.cs" />
     <Compile Include="Negocio\MayoristaServicio.cs" />
+    <Compile Include="Presentacion\FrmIntegrantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmIntegrantes.Designer.cs">
+      <DependentUpon>FrmIntegrantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\FrmCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmIntegrantes.resx">
+      <DependentUpon>FrmIntegrantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmMayorista.resx">
       <DependentUpon>FrmMayorista.cs</DependentUpon>

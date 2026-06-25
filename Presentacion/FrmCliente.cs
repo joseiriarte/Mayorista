@@ -35,5 +35,13 @@ namespace Mayorista.Presentacion
                 dgvClientes.Rows.Add(c.Apellido, c.Nombre);
             }
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea regresar al menú principal?", "Regresando", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+            {
+                this.Close();
+            }
+        }
     }
 }
