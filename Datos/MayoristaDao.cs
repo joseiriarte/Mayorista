@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mayorista.Datos
 {
@@ -20,7 +21,8 @@ namespace Mayorista.Datos
         {
             List<Cliente> listaClientes = new List<Cliente>();
             
-            string consultaSQL = "select c.id_cliente, c.nombre, c.apellido, c.telefono from clientes c";
+            string consultaSQL = "select * from clientes c";
+
             if (!string.IsNullOrEmpty(filtro))
             {
                 consultaSQL += " where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";

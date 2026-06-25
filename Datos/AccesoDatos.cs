@@ -8,10 +8,14 @@ using System.Threading.Tasks;
 
 namespace Mayorista.Datos
 {
-    internal class AccesoDatos
+    public class AccesoDatos
     {
-        private string CadenaConexion = "Data Source= localhost\\SQLEXPRESS01;Initial Catalog=TUP_PI_1w1_TPI_G18_Mayorista_Fiambres_Lacteos;Integrated Security=True";
+        private string CadenaConexion = "Data Source=.\\SQLEXPRESS;Initial Catalog=TUP_PI_1w1_TPI_G18_Mayorista_Fiambres_Lacteos;Integrated Security=True";
         //"Data Source=.\\SQLEXPRESS;Initial Catalog=TUP_PI_1w1_TPI_G18_Mayorista_Fiambres_Lacteos;Integrated Security=True"; 
+<<<<<<< Updated upstream
+=======
+        //"Data Source= localhost\\SQLEXPRESS01;Initial Catalog=TUP_PI_1w1_TPI_G18_Mayorista_Fiambres_Lacteos;Integrated Security=True";
+>>>>>>> Stashed changes
 
         private SqlConnection conexion;
         private SqlCommand comando;

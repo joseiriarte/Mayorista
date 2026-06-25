@@ -38,15 +38,15 @@ namespace Mayorista.Presentacion
                 dgvClientes.Rows.Add(c.Id_cliente, c.Nombre, c.Apellido, c.Telefono);
             }
 
-            List<DireccionCliente> listaD = new List<DireccionCliente>();
-            if (!string.IsNullOrEmpty(txtCliente.Text))
-                filtro = txtCliente.Text;
-            listaD = servicio.TraerDomicilios(filtro);
+            //List<DireccionCliente> listaD = new List<DireccionCliente>();
+            //if (!string.IsNullOrEmpty(txtCliente.Text))
+            //    filtro = txtCliente.Text;
+            //listaD = servicio.TraerDomicilios(filtro);
 
-            foreach (DireccionCliente d in listaD)
-            {
-                dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
-            }
+            //foreach (DireccionCliente d in listaD)
+            //{
+            //    dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
+            //}
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
