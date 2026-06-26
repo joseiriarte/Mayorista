@@ -113,7 +113,7 @@ namespace Mayorista.Datos
             return c;
         }
 
-        internal List<Cliente> RecuperarConsulta1()
+        
         internal List<ClienteConsulta> RecuperarConsulta1()
         {
             List <ClienteConsulta> listaCliente1 = new List<ClienteConsulta>();
