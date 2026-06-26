@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta1));
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
+            this.btnCon1 = new System.Windows.Forms.Button();
+            this.lblCon1 = new System.Windows.Forms.Label();
+            this.btnSalirCon1 = new System.Windows.Forms.Button();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPromedio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCantidadTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCon1 = new System.Windows.Forms.Button();
-            this.lblCon1 = new System.Windows.Forms.Label();
-            this.btnSalirCon1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,18 +50,47 @@
             this.ColumnTotal,
             this.ColumnPromedio,
             this.ColumnCantidadTotal});
-            this.dgvConsultas.Location = new System.Drawing.Point(12, 67);
+            this.dgvConsultas.Location = new System.Drawing.Point(12, 115);
             this.dgvConsultas.Name = "dgvConsultas";
             this.dgvConsultas.ReadOnly = true;
-            this.dgvConsultas.Size = new System.Drawing.Size(776, 227);
+            this.dgvConsultas.Size = new System.Drawing.Size(789, 227);
             this.dgvConsultas.TabIndex = 0;
+            // 
+            // btnCon1
+            // 
+            this.btnCon1.Location = new System.Drawing.Point(12, 68);
+            this.btnCon1.Name = "btnCon1";
+            this.btnCon1.Size = new System.Drawing.Size(75, 23);
+            this.btnCon1.TabIndex = 1;
+            this.btnCon1.Text = "Consultar";
+            this.btnCon1.UseVisualStyleBackColor = true;
+            this.btnCon1.Click += new System.EventHandler(this.btnCon1_Click);
+            // 
+            // lblCon1
+            // 
+            this.lblCon1.AutoSize = true;
+            this.lblCon1.Location = new System.Drawing.Point(9, 22);
+            this.lblCon1.Name = "lblCon1";
+            this.lblCon1.Size = new System.Drawing.Size(802, 26);
+            this.lblCon1.TabIndex = 5;
+            this.lblCon1.Text = resources.GetString("lblCon1.Text");
+            // 
+            // btnSalirCon1
+            // 
+            this.btnSalirCon1.Location = new System.Drawing.Point(726, 369);
+            this.btnSalirCon1.Name = "btnSalirCon1";
+            this.btnSalirCon1.Size = new System.Drawing.Size(75, 23);
+            this.btnSalirCon1.TabIndex = 6;
+            this.btnSalirCon1.Text = "Salir";
+            this.btnSalirCon1.UseVisualStyleBackColor = true;
+            this.btnSalirCon1.Click += new System.EventHandler(this.btnSalirCon1_Click);
             // 
             // ColumnNombre
             // 
             this.ColumnNombre.HeaderText = "Nombre completo";
             this.ColumnNombre.Name = "ColumnNombre";
             this.ColumnNombre.ReadOnly = true;
-            this.ColumnNombre.Width = 180;
+            this.ColumnNombre.Width = 150;
             // 
             // ColumnTotal
             // 
@@ -82,47 +111,20 @@
             this.ColumnCantidadTotal.HeaderText = "Cantidad total de articulos vendidos";
             this.ColumnCantidadTotal.Name = "ColumnCantidadTotal";
             this.ColumnCantidadTotal.ReadOnly = true;
-            this.ColumnCantidadTotal.Width = 150;
-            // 
-            // btnCon1
-            // 
-            this.btnCon1.Location = new System.Drawing.Point(3, 38);
-            this.btnCon1.Name = "btnCon1";
-            this.btnCon1.Size = new System.Drawing.Size(75, 23);
-            this.btnCon1.TabIndex = 1;
-            this.btnCon1.Text = "Consultar";
-            this.btnCon1.UseVisualStyleBackColor = true;
-            this.btnCon1.Click += new System.EventHandler(this.btnCon1_Click);
-            // 
-            // lblCon1
-            // 
-            this.lblCon1.AutoSize = true;
-            this.lblCon1.Location = new System.Drawing.Point(0, 9);
-            this.lblCon1.Name = "lblCon1";
-            this.lblCon1.Size = new System.Drawing.Size(802, 26);
-            this.lblCon1.TabIndex = 5;
-            this.lblCon1.Text = resources.GetString("lblCon1.Text");
-            // 
-            // btnSalirCon1
-            // 
-            this.btnSalirCon1.Location = new System.Drawing.Point(3, 415);
-            this.btnSalirCon1.Name = "btnSalirCon1";
-            this.btnSalirCon1.Size = new System.Drawing.Size(75, 23);
-            this.btnSalirCon1.TabIndex = 6;
-            this.btnSalirCon1.Text = "Salir";
-            this.btnSalirCon1.UseVisualStyleBackColor = true;
-            this.btnSalirCon1.Click += new System.EventHandler(this.btnSalirCon1_Click);
+            this.ColumnCantidadTotal.Width = 220;
             // 
             // FrmConsulta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(813, 408);
             this.Controls.Add(this.btnSalirCon1);
             this.Controls.Add(this.lblCon1);
             this.Controls.Add(this.btnCon1);
             this.Controls.Add(this.dgvConsultas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsulta1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).EndInit();
             this.ResumeLayout(false);
@@ -135,10 +137,10 @@
         private System.Windows.Forms.DataGridView dgvConsultas;
         private System.Windows.Forms.Button btnCon1;
         private System.Windows.Forms.Label lblCon1;
+        private System.Windows.Forms.Button btnSalirCon1;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnPromedio;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCantidadTotal;
-        private System.Windows.Forms.Button btnSalirCon1;
     }
 }

@@ -30,11 +30,25 @@ namespace Mayorista.Negocio
             return dao.RecuperarDomicilios(id);
         }
 
-        internal List<Cliente> TraerConsulta1()
+        internal List<ClienteConsulta> TraerConsulta1()
         {
             return dao.RecuperarConsulta1();
         }
 
+        internal List<FacturaConsulta> TraerConsulta2()
+        {
+            return dao.RecuperarConsulta2();
+        }
+
+        internal List<RubroConsulta> TraerConsulta3()
+        {
+            return dao.RecuperarConsulta3();
+        }
+
+        internal List<ClienteConsulta> TraerConsulta4()
+        {
+            return dao.RecuperarConsulta4();
+        }
         internal object TraerTiposDoc()
         {
             return dao.RecuperarTiposDoc();

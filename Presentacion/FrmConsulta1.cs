@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,13 +24,15 @@ namespace Mayorista.Presentacion
         {
             dgvConsultas.Rows.Clear();
 
-            List<Cliente> lista = new List<Cliente>();
+            List<ClienteConsulta> lista = new List<ClienteConsulta>();
 
             lista = servicio.TraerConsulta1();
-
-            foreach (Cliente c in lista)
+            
+            CultureInfo formatoPeso = new CultureInfo("es-AR");
+            // Formato de moneda para Argentina (using System.Globalization; CultureInfo (clase de .NET))
+            foreach (ClienteConsulta c in lista)
             {
-                dgvConsultas.Rows.Add(c.Nombre);
+                dgvConsultas.Rows.Add(c.Nombre + " " + c.Apellido, c.TotalCompras.ToString("C2", formatoPeso), c.PromedioCompras.ToString("C2", formatoPeso), c.CantidadCompras);
             }
 
         }
