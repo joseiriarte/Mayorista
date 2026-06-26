@@ -38,17 +38,17 @@
             this.btnNuevoCl = new System.Windows.Forms.Button();
             this.lblDomicilios = new System.Windows.Forms.Label();
             this.dgvDomicilios = new System.Windows.Forms.DataGridView();
-            this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.btnBuscarCliente = new System.Windows.Forms.Button();
-            this.txtCliente = new System.Windows.Forms.TextBox();
-            this.lblCliente = new System.Windows.Forms.Label();
-            this.btnAtras = new System.Windows.Forms.Button();
             this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnApellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTelefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBuscarCliente = new System.Windows.Forms.Button();
+            this.txtCliente = new System.Windows.Forms.TextBox();
+            this.lblCliente = new System.Windows.Forms.Label();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -152,6 +152,19 @@
             this.dgvDomicilios.Size = new System.Drawing.Size(464, 150);
             this.dgvDomicilios.TabIndex = 4;
             // 
+            // ColumnCP
+            // 
+            this.ColumnCP.HeaderText = "Código Postal";
+            this.ColumnCP.Name = "ColumnCP";
+            this.ColumnCP.ReadOnly = true;
+            // 
+            // ColumnDireccion
+            // 
+            this.ColumnDireccion.HeaderText = "Dirección";
+            this.ColumnDireccion.Name = "ColumnDireccion";
+            this.ColumnDireccion.ReadOnly = true;
+            this.ColumnDireccion.Width = 300;
+            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
@@ -168,6 +181,32 @@
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(464, 150);
             this.dgvClientes.TabIndex = 3;
+            // 
+            // ColumnNumero
+            // 
+            this.ColumnNumero.HeaderText = "Número";
+            this.ColumnNumero.Name = "ColumnNumero";
+            this.ColumnNumero.ReadOnly = true;
+            this.ColumnNumero.Width = 50;
+            // 
+            // ColumnNombre
+            // 
+            this.ColumnNombre.HeaderText = "Nombre";
+            this.ColumnNombre.Name = "ColumnNombre";
+            this.ColumnNombre.ReadOnly = true;
+            // 
+            // ColumnApellido
+            // 
+            this.ColumnApellido.HeaderText = "Apellido";
+            this.ColumnApellido.Name = "ColumnApellido";
+            this.ColumnApellido.ReadOnly = true;
+            // 
+            // ColumnTelefono
+            // 
+            this.ColumnTelefono.HeaderText = "Teléfono";
+            this.ColumnTelefono.Name = "ColumnTelefono";
+            this.ColumnTelefono.ReadOnly = true;
+            this.ColumnTelefono.Width = 150;
             // 
             // btnBuscarCliente
             // 
@@ -203,45 +242,6 @@
             this.btnAtras.Text = "<< Atrás";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
-            // 
-            // ColumnCP
-            // 
-            this.ColumnCP.HeaderText = "Código Postal";
-            this.ColumnCP.Name = "ColumnCP";
-            this.ColumnCP.ReadOnly = true;
-            // 
-            // ColumnDireccion
-            // 
-            this.ColumnDireccion.HeaderText = "Dirección";
-            this.ColumnDireccion.Name = "ColumnDireccion";
-            this.ColumnDireccion.ReadOnly = true;
-            this.ColumnDireccion.Width = 300;
-            // 
-            // ColumnNumero
-            // 
-            this.ColumnNumero.HeaderText = "Número";
-            this.ColumnNumero.Name = "ColumnNumero";
-            this.ColumnNumero.ReadOnly = true;
-            this.ColumnNumero.Width = 50;
-            // 
-            // ColumnNombre
-            // 
-            this.ColumnNombre.HeaderText = "Nombre";
-            this.ColumnNombre.Name = "ColumnNombre";
-            this.ColumnNombre.ReadOnly = true;
-            // 
-            // ColumnApellido
-            // 
-            this.ColumnApellido.HeaderText = "Apellido";
-            this.ColumnApellido.Name = "ColumnApellido";
-            this.ColumnApellido.ReadOnly = true;
-            // 
-            // ColumnTelefono
-            // 
-            this.ColumnTelefono.HeaderText = "Teléfono";
-            this.ColumnTelefono.Name = "ColumnTelefono";
-            this.ColumnTelefono.ReadOnly = true;
-            this.ColumnTelefono.Width = 150;
             // 
             // FrmCliente
             // 
