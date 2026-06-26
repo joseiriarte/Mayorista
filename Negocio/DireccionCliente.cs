@@ -10,14 +10,14 @@ namespace Mayorista.Negocio
     {
         private int id_direccion_cliente;
         private int id_cliente;
-        private int id_barrio;
+        private Barrio id_barrio;
         private string direccion;
         private string codigo_postal;
 
         public int Id_direccion_cliente { get; set; }
         public int Id_cliente { get; set; }
 
-        public int Id_barrio { get; set; }
+        public Barrio Id_barrio { get; set; }
 
         public string Direccion { get; set; }
 

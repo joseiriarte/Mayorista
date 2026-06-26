@@ -49,6 +49,7 @@
     <Compile Include="Datos\AccesoDatos.cs" />
     <Compile Include="Datos\MayoristaDao.cs" />
     <Compile Include="Datos\Parametro.cs" />
+    <Compile Include="Negocio\Barrio.cs" />
     <Compile Include="Negocio\Cliente.cs" />
     <Compile Include="Negocio\ClienteConsulta.cs" />
     <Compile Include="Negocio\DireccionCliente.cs" />
@@ -85,6 +86,12 @@
     </Compile>
     <Compile Include="Presentacion\FrmDetalleCliente.Designer.cs">
       <DependentUpon>FrmDetalleCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\FrmDetalleDomicilio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\FrmDetalleDomicilio.Designer.cs">
+      <DependentUpon>FrmDetalleDomicilio.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\FrmIntegrantes.cs">
       <SubType>Form</SubType>
@@ -123,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmDetalleCliente.resx">
       <DependentUpon>FrmDetalleCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmDetalleDomicilio.resx">
+      <DependentUpon>FrmDetalleDomicilio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmIntegrantes.resx">
       <DependentUpon>FrmIntegrantes.cs</DependentUpon>

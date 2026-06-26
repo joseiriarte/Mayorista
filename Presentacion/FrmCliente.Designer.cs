@@ -100,6 +100,7 @@
             this.btnNuevoDom.TabIndex = 1;
             this.btnNuevoDom.Text = "Nuevo";
             this.btnNuevoDom.UseVisualStyleBackColor = true;
+            this.btnNuevoDom.Click += new System.EventHandler(this.btnNuevoDom_Click);
             // 
             // btnEliminarCl
             // 

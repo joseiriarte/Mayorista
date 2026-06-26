@@ -85,5 +85,10 @@ namespace Mayorista.Presentacion
             }
             return true;
         }
+
+        private void btnCancelarCliente_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

@@ -31,6 +31,35 @@ namespace Mayorista.Datos
             return db.ActualizarBD(consulta, lista) > 0;
         }
 
+        internal bool CrearDomicilio(DireccionCliente d)
+        {
+            string consulta = "insert into direcciones_clientes (id_cliente, id_barrio, direccion, codigo_postal) values (@idCliente, @idBarrio, @direccion, @codigoPostal)";
+            List<Parametro> lista = new List<Parametro>();
+            lista.Add(new Parametro("@idCliente", d.Id_cliente));
+            lista.Add(new Parametro("@idBarrio", d.Id_barrio.Id_barrio));
+            lista.Add(new Parametro("@direccion", d.Direccion));
+            lista.Add(new Parametro("@codigoPostal", d.Codigo_postal));
+
+            return db.ActualizarBD(consulta, lista) > 0;
+        }
+
+        internal object RecuperarBarrios()
+        {
+            List<Barrio> listaBarrios = new List<Barrio>();
+
+            DataTable dt = db.ConsultarTabla("barrios");
+            foreach (DataRow dr in dt.Rows)
+            {
+                Barrio b = new Barrio();
+                b.Id_barrio = (int)dr[0];
+                b.Id_localidad = (int)dr[1];
+                b.Nombre_barrio = (string)dr[2];
+
+                listaBarrios.Add(b);
+            }
+            return listaBarrios;
+        }
+
         internal List<Cliente> RecuperarClientes(string filtro)
         {
             List<Cliente> listaClientes = new List<Cliente>();
@@ -153,7 +182,8 @@ namespace Mayorista.Datos
                 DireccionCliente oDomicilio = new DireccionCliente();
                 oDomicilio.Id_direccion_cliente = (int)fila[0];
                 oDomicilio.Id_cliente = (int)fila[1];
-                oDomicilio.Id_barrio = (int)fila[2];
+                oDomicilio.Id_barrio = new Barrio();
+                oDomicilio.Id_barrio.Id_barrio = (int)fila[2];
                 oDomicilio.Direccion = (string)fila[3];
                 oDomicilio.Codigo_postal = (string)fila[4];
                 listaDomicilios.Add(oDomicilio);
