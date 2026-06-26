@@ -9,7 +9,7 @@ namespace Mayorista.Negocio
     public class Cliente
     {
         private int id_cliente;
-        private int id_tipo_documento;
+        private TipoDoc id_tipo_documento;
         private string nro_documento;
         private string nombre;
         private string apellido;
@@ -21,7 +21,7 @@ namespace Mayorista.Negocio
             get { return id_cliente; }
             set { id_cliente = value; }
         }
-        public int Id_tipo_documento
+        public TipoDoc Id_tipo_documento
         {
             get { return id_tipo_documento; }
             set { id_tipo_documento = value; }

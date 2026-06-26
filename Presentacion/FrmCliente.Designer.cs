@@ -127,6 +127,7 @@
             this.btnNuevoCl.TabIndex = 6;
             this.btnNuevoCl.Text = "Nuevo";
             this.btnNuevoCl.UseVisualStyleBackColor = true;
+            this.btnNuevoCl.Click += new System.EventHandler(this.btnNuevoCl_Click);
             // 
             // lblDomicilios
             // 
@@ -181,6 +182,7 @@
             this.dgvClientes.ReadOnly = true;
             this.dgvClientes.Size = new System.Drawing.Size(464, 150);
             this.dgvClientes.TabIndex = 3;
+            this.dgvClientes.SelectionChanged += new System.EventHandler(this.dgvClientes_SelectionChanged);
             // 
             // ColumnNumero
             // 
@@ -216,6 +218,7 @@
             this.btnBuscarCliente.TabIndex = 2;
             this.btnBuscarCliente.Text = "Buscar cliente";
             this.btnBuscarCliente.UseVisualStyleBackColor = true;
+            this.btnBuscarCliente.Click += new System.EventHandler(this.btnBuscarCliente_Click);
             // 
             // txtCliente
             // 

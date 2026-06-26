@@ -38,14 +38,32 @@ namespace Mayorista.Presentacion
                 dgvClientes.Rows.Add(c.Id_cliente, c.Nombre, c.Apellido, c.Telefono);
             }
 
-            List<DireccionCliente> listaD = new List<DireccionCliente>();
-            if (!string.IsNullOrEmpty(txtCliente.Text))
-                filtro = txtCliente.Text;
-            listaD = servicio.TraerDomicilios(filtro);
+            //List<DireccionCliente> listaD = new List<DireccionCliente>();
+            //if (!string.IsNullOrEmpty(txtCliente.Text))
+            //    filtro = txtCliente.Text;
+            //listaD = servicio.TraerDomicilios(filtro);
 
-            foreach (DireccionCliente d in listaD)
+            //foreach (DireccionCliente d in listaD)
+            //{
+            //    dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
+            //}
+        }
+
+        private void dgvClientes_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvClientes.CurrentRow == null)
+                return;
+
+            int idCliente = Convert.ToInt32(
+                dgvClientes.CurrentRow.Cells["ColumnNumero"].Value);
+
+            List<DireccionCliente> lista = servicio.TraerDomicilios(idCliente);
+
+            dgvDomicilios.Rows.Clear();
+
+            foreach (DireccionCliente d in lista)
             {
-                dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
+                dgvDomicilios.Rows.Add(d.Direccion, d.Codigo_postal);
             }
         }
 
@@ -55,6 +73,12 @@ namespace Mayorista.Presentacion
             {
                 this.Close();
             }
+        }
+
+        private void btnNuevoCl_Click(object sender, EventArgs e)
+        {
+            FrmDetalleCliente fdc = new FrmDetalleCliente();
+            fdc.ShowDialog();
         }
     }
 }

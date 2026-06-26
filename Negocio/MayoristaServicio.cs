@@ -20,14 +20,24 @@ namespace Mayorista.Negocio
             return dao.RecuperarClientes(filtro);
         }
 
-        internal List<DireccionCliente> TraerDomicilios(string filtro)
+        internal List<DireccionCliente> TraerDomicilios(int id)
         {
-            return dao.RecuperarDomicilios(filtro);
+            return dao.RecuperarDomicilios(id);
         }
 
         internal List<Cliente> TraerConsulta1()
         {
             return dao.RecuperarConsulta1();
+        }
+
+        internal object TraerTiposDoc()
+        {
+            return dao.RecuperarTiposDoc();
+        }
+
+        internal bool GuardarCliente(Cliente c)
+        {
+            return dao.CrearCliente(c);
         }
     }
 }

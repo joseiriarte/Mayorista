@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mayorista.Datos
 {
-    internal class Parametro
+    public class Parametro
     {
         private string nombre;
         private object valor;

@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Mayorista.Datos
 {
@@ -16,11 +17,26 @@ namespace Mayorista.Datos
             db = new AccesoDatos();
         }
 
+        internal bool CrearCliente(Cliente c)
+        {
+            string consulta = "insert into clientes (id_tipo_documento, nro_documento, nombre, apellido, email, telefono) values (@idTipoDocumento, @nroDocumento, @nombre, @apellido, @email, @telefono)";
+            List<Parametro> lista = new List<Parametro>();
+            lista.Add(new Parametro("@idTipoDocumento", c.Id_tipo_documento.Id_tipo_documento));
+            lista.Add(new Parametro("@nroDocumento", c.Nro_documento));
+            lista.Add(new Parametro("@nombre", c.Nombre));
+            lista.Add(new Parametro("@apellido", c.Apellido));
+            lista.Add(new Parametro("@email", c.Email));
+            lista.Add(new Parametro("@telefono", c.Telefono));
+
+            return db.ActualizarBD(consulta, lista) > 0;
+        }
+
         internal List<Cliente> RecuperarClientes(string filtro)
         {
             List<Cliente> listaClientes = new List<Cliente>();
             
-            string consultaSQL = "select c.id_cliente, c.nombre, c.apellido, c.telefono from clientes c";
+            string consultaSQL = "select * from clientes c";
+
             if (!string.IsNullOrEmpty(filtro))
             {
                 consultaSQL += " where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";
@@ -28,15 +44,16 @@ namespace Mayorista.Datos
             DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
-                Cliente oCliente = new Cliente();
-                oCliente.Id_cliente = (int)fila[0];
-                oCliente.Id_tipo_documento = (int)fila[1];
-                oCliente.Nro_documento = (string)fila[2];
-                oCliente.Nombre = (string)fila[3];
-                oCliente.Apellido = (string)fila[4];
-                oCliente.Email = (string)fila[5];
-                oCliente.Telefono = (string)fila[6];
-                listaClientes.Add(oCliente);
+                Cliente c = new Cliente();
+                c.Id_cliente = (int)fila[0];
+                c.Id_tipo_documento = new TipoDoc();
+                c.Id_tipo_documento.Id_tipo_documento = (int)fila[1];
+                c.Nro_documento = (string)fila[2];
+                c.Nombre = (string)fila[3];
+                c.Apellido = (string)fila[4];
+                c.Email = (string)fila[5];
+                c.Telefono = (string)fila[6];
+                listaClientes.Add(c);
             }
             return listaClientes;
         }
@@ -55,14 +72,11 @@ namespace Mayorista.Datos
             return listaCliente1;
         }
 
-        internal List<DireccionCliente> RecuperarDomicilios(string filtro)
+        internal List<DireccionCliente> RecuperarDomicilios(int id)
         {
             List<DireccionCliente> listaDomicilios = new List<DireccionCliente>();
-            string consultaSQL = "select d.* from direcciones_clientes d";
-            if (!string.IsNullOrEmpty(filtro))
-            {
-                consultaSQL += "from domicilios d join clientes c on d.id_cliente = c.id_cliente where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";
-            }
+            string consultaSQL = "select * from direcciones_clientes where id_cliente = " + id;
+            
             DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
@@ -75,6 +89,22 @@ namespace Mayorista.Datos
                 listaDomicilios.Add(oDomicilio);
             }
             return listaDomicilios;
+        }
+
+        internal object RecuperarTiposDoc()
+        {
+            List<TipoDoc> listaTiposDoc = new List<TipoDoc>();
+
+            DataTable dt = db.ConsultarTabla("tipos_documentos");
+            foreach (DataRow dr in dt.Rows)
+            {
+                TipoDoc t = new TipoDoc();
+                t.Id_tipo_documento = (int)dr[0];
+                t.Tipo_documento = (string)dr[1];
+
+                listaTiposDoc.Add(t);
+            }
+            return listaTiposDoc;
         }
     }
 }
