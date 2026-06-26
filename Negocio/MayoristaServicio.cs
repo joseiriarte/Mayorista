@@ -39,5 +39,15 @@ namespace Mayorista.Negocio
         {
             return dao.CrearCliente(c);
         }
+
+        internal object TraerBarrios()
+        {
+            return dao.RecuperarBarrios();
+        }
+
+        internal bool GuardarDomicilio(DireccionCliente d)
+        {
+            return dao.CrearDomicilio(d);
+        }
     }
 }

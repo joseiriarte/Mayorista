@@ -37,16 +37,6 @@ namespace Mayorista.Presentacion
             {
                 dgvClientes.Rows.Add(c.Id_cliente, c.Nombre, c.Apellido, c.Telefono);
             }
-
-            //List<DireccionCliente> listaD = new List<DireccionCliente>();
-            //if (!string.IsNullOrEmpty(txtCliente.Text))
-            //    filtro = txtCliente.Text;
-            //listaD = servicio.TraerDomicilios(filtro);
-
-            //foreach (DireccionCliente d in listaD)
-            //{
-            //    dgvDomicilios.Rows.Add(d.Codigo_postal, d.Direccion);
-            //}
         }
 
         private void dgvClientes_SelectionChanged(object sender, EventArgs e)
@@ -79,6 +69,23 @@ namespace Mayorista.Presentacion
         {
             FrmDetalleCliente fdc = new FrmDetalleCliente();
             fdc.ShowDialog();
+        }
+
+        private void btnNuevoDom_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un cliente para agregar un domicilio");
+                return;
+            }
+                
+            //Capturar id y nombre del cliente para agregar un domicilio
+            int idCliente = (int)dgvClientes.CurrentRow.Cells["ColumnNumero"].Value;
+            string nombre = (string)dgvClientes.CurrentRow.Cells["ColumnNombre"].Value;
+            string apellido = (string)dgvClientes.CurrentRow.Cells["ColumnApellido"].Value;
+
+            FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(idCliente, $"{nombre} {apellido}");
+            fdd.ShowDialog();
         }
     }
 }
