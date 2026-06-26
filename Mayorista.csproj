@@ -50,8 +50,11 @@
     <Compile Include="Datos\MayoristaDao.cs" />
     <Compile Include="Datos\Parametro.cs" />
     <Compile Include="Negocio\Cliente.cs" />
+    <Compile Include="Negocio\ClienteConsulta.cs" />
     <Compile Include="Negocio\DireccionCliente.cs" />
+    <Compile Include="Negocio\FacturaConsulta.cs" />
     <Compile Include="Negocio\MayoristaServicio.cs" />
+    <Compile Include="Negocio\RubroConsulta.cs" />
     <Compile Include="Negocio\TipoDoc.cs" />
     <Compile Include="Presentacion\FrmConsulta2.cs">
       <SubType>Form</SubType>
@@ -108,6 +111,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmConsulta1.resx">
       <DependentUpon>FrmConsulta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmConsulta2.resx">
+      <DependentUpon>FrmConsulta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmConsulta3.resx">
+      <DependentUpon>FrmConsulta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\FrmConsulta4.resx">
+      <DependentUpon>FrmConsulta4.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\FrmDetalleCliente.resx">
       <DependentUpon>FrmDetalleCliente.cs</DependentUpon>
