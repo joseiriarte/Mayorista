@@ -14,15 +14,40 @@ namespace Mayorista.Presentacion
     public partial class FrmDetalleCliente : Form
     {
         MayoristaServicio servicio;
+        private Cliente cliente;
         public FrmDetalleCliente()
         {
             InitializeComponent();
             servicio = new MayoristaServicio();
         }
 
+        public FrmDetalleCliente(Cliente c)
+        {
+            InitializeComponent();
+            servicio = new MayoristaServicio();
+            this.cliente = c;
+        }
+
         private void FrmDetalleCliente_Load(object sender, EventArgs e)
         {
             CargarCombo();
+
+            if( cliente != null )
+            {
+                foreach (TipoDoc tipo in cboTipoDoc.Items)
+                {
+                    if (tipo.Id_tipo_documento == cliente.Id_tipo_documento.Id_tipo_documento)
+                    {
+                        cboTipoDoc.SelectedItem = tipo;
+                        break;
+                    }
+                }
+                txtNroDoc.Text = cliente.Nro_documento;
+                txtNombre.Text = cliente.Nombre;
+                txtApellido.Text = cliente.Apellido;
+                txtEmail.Text = cliente.Email;
+                txtTelefono.Text = cliente.Telefono;
+            }
         }
 
         private void CargarCombo()

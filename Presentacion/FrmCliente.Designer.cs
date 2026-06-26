@@ -119,6 +119,7 @@
             this.btnEditarCl.TabIndex = 7;
             this.btnEditarCl.Text = "Editar";
             this.btnEditarCl.UseVisualStyleBackColor = true;
+            this.btnEditarCl.Click += new System.EventHandler(this.btnEditarCl_Click);
             // 
             // btnNuevoCl
             // 

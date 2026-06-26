@@ -75,7 +75,7 @@ namespace Mayorista.Presentacion
         {
             if (dgvClientes.Rows.Count == 0)
             {
-                MessageBox.Show("Seleccione un cliente para agregar un domicilio");
+                MessageBox.Show("Seleccione un cliente para agregar un domicilio.");
                 return;
             }
                 
@@ -86,6 +86,23 @@ namespace Mayorista.Presentacion
 
             FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(idCliente, $"{nombre} {apellido}");
             fdd.ShowDialog();
+        }
+
+        private void btnEditarCl_Click(object sender, EventArgs e)
+        {
+            if (dgvClientes.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un cliente para editarlo.");
+                return;
+            }
+
+            //Capturar cliente
+            int id = (int)dgvClientes.CurrentRow.Cells["ColumnNumero"].Value;
+
+            Cliente c = servicio.TraerClientePorId(id);
+
+            FrmDetalleCliente fdc = new FrmDetalleCliente(c);
+            fdc.ShowDialog();
         }
     }
 }

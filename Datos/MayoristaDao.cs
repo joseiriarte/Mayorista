@@ -87,6 +87,32 @@ namespace Mayorista.Datos
             return listaClientes;
         }
 
+        internal Cliente RecuperarClientePorId(int id)
+        {
+            Cliente c = null;
+
+            string consultaSQL = "select * from clientes c where c.id_cliente = " + id;
+
+            DataTable dt = db.ConsultarBD(consultaSQL);
+
+            if(dt.Rows.Count > 0)
+            {
+                DataRow dr = dt.Rows[0];
+
+                c = new Cliente();
+                c.Id_cliente = (int)dr[0];
+                c.Id_tipo_documento = new TipoDoc();
+                c.Id_tipo_documento.Id_tipo_documento = (int)dr[1];
+                c.Nro_documento = (string)dr[2];
+                c.Nombre = (string)dr[3];
+                c.Apellido = (string)dr[4];
+                c.Email = (string)dr[5];
+                c.Telefono = (string)dr[6];
+                
+            }
+            return c;
+        }
+
         internal List<Cliente> RecuperarConsulta1()
         {
             List <Cliente> listaCliente1 = new List<Cliente>();
