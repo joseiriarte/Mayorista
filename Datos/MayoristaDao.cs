@@ -73,44 +73,22 @@ namespace Mayorista.Datos
             DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
-                Cliente c = new Cliente();
-                c.Id_cliente = (int)fila[0];
-                c.Id_tipo_documento = new TipoDoc();
-                c.Id_tipo_documento.Id_tipo_documento = (int)fila[1];
-                c.Nro_documento = (string)fila[2];
-                c.Nombre = (string)fila[3];
-                c.Apellido = (string)fila[4];
-                c.Email = (string)fila[5];
-                c.Telefono = (string)fila[6];
-                listaClientes.Add(c);
+                listaClientes.Add(CrearCliente(fila));
             }
             return listaClientes;
         }
 
         internal Cliente RecuperarClientePorId(int id)
         {
-            Cliente c = null;
-
             string consultaSQL = "select * from clientes c where c.id_cliente = " + id;
 
             DataTable dt = db.ConsultarBD(consultaSQL);
 
             if(dt.Rows.Count > 0)
             {
-                DataRow dr = dt.Rows[0];
-
-                c = new Cliente();
-                c.Id_cliente = (int)dr[0];
-                c.Id_tipo_documento = new TipoDoc();
-                c.Id_tipo_documento.Id_tipo_documento = (int)dr[1];
-                c.Nro_documento = (string)dr[2];
-                c.Nombre = (string)dr[3];
-                c.Apellido = (string)dr[4];
-                c.Email = (string)dr[5];
-                c.Telefono = (string)dr[6];
-                
+                return CrearCliente(dt.Rows[0]);
             }
-            return c;
+            return null;
         }
 
         
@@ -206,14 +184,7 @@ namespace Mayorista.Datos
             DataTable tabla = db.ConsultarBD(consultaSQL);
             foreach (DataRow fila in tabla.Rows)
             {
-                DireccionCliente oDomicilio = new DireccionCliente();
-                oDomicilio.Id_direccion_cliente = (int)fila[0];
-                oDomicilio.Id_cliente = (int)fila[1];
-                oDomicilio.Id_barrio = new Barrio();
-                oDomicilio.Id_barrio.Id_barrio = (int)fila[2];
-                oDomicilio.Direccion = (string)fila[3];
-                oDomicilio.Codigo_postal = (string)fila[4];
-                listaDomicilios.Add(oDomicilio);
+                listaDomicilios.Add(CrearDireccion(fila));
             }
             return listaDomicilios;
         }
@@ -232,6 +203,93 @@ namespace Mayorista.Datos
                 listaTiposDoc.Add(t);
             }
             return listaTiposDoc;
+        }
+
+        private Cliente CrearCliente(DataRow dr)
+        {
+            Cliente c = new Cliente();
+
+            c.Id_cliente = (int)dr[0];
+            c.Id_tipo_documento = new TipoDoc();
+            c.Id_tipo_documento.Id_tipo_documento = (int)dr[1];
+            c.Nro_documento = (string)dr[2];
+            c.Nombre = (string)dr[3];
+            c.Apellido = (string)dr[4];
+            c.Email = (string)dr[5];
+            c.Telefono = (string)dr[6];
+
+            return c;
+        }
+
+        private DireccionCliente CrearDireccion(DataRow dr)
+        {
+            DireccionCliente d = new DireccionCliente();
+
+            d.Id_direccion_cliente = (int)dr[0];
+            d.Id_cliente = (int)dr[1];
+            d.Id_barrio = new Barrio();
+            d.Id_barrio.Id_barrio = (int)dr[2];
+            d.Direccion = (string)dr[3];
+            d.Codigo_postal = (string)dr[4];
+            
+            return d;
+        }
+
+        internal bool ActualizarCliente(Cliente c)
+        {
+            string consulta = @"UPDATE clientes
+                        SET id_tipo_documento = @idTipoDocumento,
+                            nro_documento = @nroDocumento,
+                            nombre = @nombre,
+                            apellido = @apellido,
+                            email = @email,
+                            telefono = @telefono
+                        WHERE id_cliente = @idCliente";
+
+            List<Parametro> lista = new List<Parametro>();
+
+            lista.Add(new Parametro("@idTipoDocumento", c.Id_tipo_documento.Id_tipo_documento));
+            lista.Add(new Parametro("@nroDocumento", c.Nro_documento));
+            lista.Add(new Parametro("@nombre", c.Nombre));
+            lista.Add(new Parametro("@apellido", c.Apellido));
+            lista.Add(new Parametro("@email", c.Email));
+            lista.Add(new Parametro("@telefono", c.Telefono));
+            lista.Add(new Parametro("@idCliente", c.Id_cliente));
+
+            return db.ActualizarBD(consulta, lista) > 0;
+        }
+
+        internal DireccionCliente RecuperarDomicilioPorId(int idDom)
+        {
+            string consultaSQL = "select * from direcciones_clientes d where d.id_direccion_cliente = " + idDom;
+
+            DataTable dt = db.ConsultarBD(consultaSQL);
+
+            if (dt.Rows.Count > 0)
+            {
+                return CrearDireccion(dt.Rows[0]);
+            }
+            return null;
+        }
+
+        internal bool ActualizarDomicilio(DireccionCliente d)
+        {
+            string consulta = "UPDATE direcciones_clientes " +
+                      "SET id_cliente = @idCliente, " +
+                      "id_barrio = @idBarrio, " +
+                      "direccion = @direccion, " +
+                      "codigo_postal = @codigoPostal " +
+                      "WHERE id_direccion_cliente = @idDireccion";
+
+            List<Parametro> lista = new List<Parametro>();
+
+            lista.Add(new Parametro("@idCliente", d.Id_cliente));
+            lista.Add(new Parametro("@idBarrio", d.Id_barrio.Id_barrio));
+            lista.Add(new Parametro("@direccion", d.Direccion));
+            lista.Add(new Parametro("@codigoPostal", d.Codigo_postal));
+            lista.Add(new Parametro("@idDireccion", d.Id_direccion_cliente));
+
+            return db.ActualizarBD(consulta, lista) > 0;
         }
     }
 }

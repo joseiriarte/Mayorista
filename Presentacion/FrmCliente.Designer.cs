@@ -38,8 +38,6 @@
             this.btnNuevoCl = new System.Windows.Forms.Button();
             this.lblDomicilios = new System.Windows.Forms.Label();
             this.dgvDomicilios = new System.Windows.Forms.DataGridView();
-            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +47,9 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
+            this.ColumnIdDom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -91,6 +92,7 @@
             this.btnEditarDom.TabIndex = 9;
             this.btnEditarDom.Text = "Editar";
             this.btnEditarDom.UseVisualStyleBackColor = true;
+            this.btnEditarDom.Click += new System.EventHandler(this.btnEditarDom_Click);
             // 
             // btnNuevoDom
             // 
@@ -147,6 +149,7 @@
             this.dgvDomicilios.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDomicilios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDomicilios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ColumnIdDom,
             this.ColumnCP,
             this.ColumnDireccion});
             this.dgvDomicilios.Location = new System.Drawing.Point(30, 321);
@@ -154,19 +157,6 @@
             this.dgvDomicilios.ReadOnly = true;
             this.dgvDomicilios.Size = new System.Drawing.Size(464, 150);
             this.dgvDomicilios.TabIndex = 4;
-            // 
-            // ColumnCP
-            // 
-            this.ColumnCP.HeaderText = "Código Postal";
-            this.ColumnCP.Name = "ColumnCP";
-            this.ColumnCP.ReadOnly = true;
-            // 
-            // ColumnDireccion
-            // 
-            this.ColumnDireccion.HeaderText = "Dirección";
-            this.ColumnDireccion.Name = "ColumnDireccion";
-            this.ColumnDireccion.ReadOnly = true;
-            this.ColumnDireccion.Width = 300;
             // 
             // dgvClientes
             // 
@@ -248,6 +238,25 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
+            // ColumnIdDom
+            // 
+            this.ColumnIdDom.HeaderText = "Id";
+            this.ColumnIdDom.Name = "ColumnIdDom";
+            this.ColumnIdDom.ReadOnly = true;
+            // 
+            // ColumnCP
+            // 
+            this.ColumnCP.HeaderText = "Código Postal";
+            this.ColumnCP.Name = "ColumnCP";
+            this.ColumnCP.ReadOnly = true;
+            // 
+            // ColumnDireccion
+            // 
+            this.ColumnDireccion.HeaderText = "Dirección";
+            this.ColumnDireccion.Name = "ColumnDireccion";
+            this.ColumnDireccion.ReadOnly = true;
+            this.ColumnDireccion.Width = 300;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -284,11 +293,12 @@
         private System.Windows.Forms.Button btnEditarCl;
         private System.Windows.Forms.Button btnNuevoCl;
         private System.Windows.Forms.Button btnAtras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDireccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNumero;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnNombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnApellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnTelefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnIdDom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnCP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ColumnDireccion;
     }
 }

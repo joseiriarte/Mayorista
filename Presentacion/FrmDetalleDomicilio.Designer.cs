@@ -123,6 +123,7 @@
             this.btnCancelarDom.TabIndex = 9;
             this.btnCancelarDom.Text = "Cancelar";
             this.btnCancelarDom.UseVisualStyleBackColor = true;
+            this.btnCancelarDom.Click += new System.EventHandler(this.btnCancelarDom_Click);
             // 
             // FrmDetalleDomicilio
             // 

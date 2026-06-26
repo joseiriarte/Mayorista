@@ -15,6 +15,9 @@ namespace Mayorista.Presentacion
     {
         MayoristaServicio servicio;
         private int idCliente;
+        private DireccionCliente domicilio;
+        private bool esEdicion;
+        private bool esEliminacion;
 
         public FrmDetalleDomicilio(int idCliente, string nombreCliente)
         {
@@ -23,12 +26,37 @@ namespace Mayorista.Presentacion
 
             this.idCliente = idCliente;
             txtDomCliente.Text = nombreCliente;
+            esEdicion = false;
+        }
+
+        public FrmDetalleDomicilio(DireccionCliente domicilio, string nombreCliente)
+        {
+            InitializeComponent();
+            servicio = new MayoristaServicio();
+
+            this.domicilio = domicilio;
+            txtDomCliente.Text= nombreCliente;
+            esEdicion = true;
         }
 
         private void FrmDetalleDomicilio_Load(object sender, EventArgs e)
         {
             CargarCombo();
             txtDomCliente.Enabled = false;
+
+            if (domicilio != null)
+            {
+                foreach (Barrio b in cboBarrio.Items)
+                {
+                    if (b.Id_barrio == domicilio.Id_barrio.Id_barrio)
+                    {
+                        cboBarrio.SelectedItem = b;
+                        break;
+                    }
+                }
+                txtDireccion.Text = domicilio.Direccion;
+                txtCP.Text = domicilio.Codigo_postal;
+            }
         }
 
         private void CargarCombo()
@@ -43,15 +71,27 @@ namespace Mayorista.Presentacion
         {
             if(Validar())
             {
-                DireccionCliente d = new DireccionCliente();
-                d.Id_cliente = idCliente;
-                d.Id_barrio = (Barrio)cboBarrio.SelectedItem;
-                d.Direccion = txtDireccion.Text;
-                d.Codigo_postal = txtCP.Text;
+                if(!esEdicion)
+                {
+                    domicilio = new DireccionCliente();
+                    domicilio.Id_cliente = idCliente;
+                }
+                
+                domicilio.Id_barrio = (Barrio)cboBarrio.SelectedItem;
+                domicilio.Direccion = txtDireccion.Text;
+                domicilio.Codigo_postal = txtCP.Text;
 
-                if (servicio.GuardarDomicilio(d))
-                    MessageBox.Show("Domicilio registrado.");
-                this.Dispose();
+                if(esEdicion)
+                {
+                    if (servicio.EditarDomicilio(domicilio))
+                        MessageBox.Show("Domicilio actualizado.");
+                }
+                else
+                {
+                    if (servicio.GuardarDomicilio(domicilio))
+                        MessageBox.Show("Domicilio registrado.");
+                }
+                    this.Dispose();
             }
         }
 
@@ -73,6 +113,11 @@ namespace Mayorista.Presentacion
                 return false;
             }
             return true;
+        }
+
+        private void btnCancelarDom_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

@@ -15,10 +15,14 @@ namespace Mayorista.Presentacion
     {
         MayoristaServicio servicio;
         private Cliente cliente;
+        private bool esEdicion;
+        private bool esEliminacion;
+
         public FrmDetalleCliente()
         {
             InitializeComponent();
             servicio = new MayoristaServicio();
+            esEdicion = false;
         }
 
         public FrmDetalleCliente(Cliente c)
@@ -26,6 +30,7 @@ namespace Mayorista.Presentacion
             InitializeComponent();
             servicio = new MayoristaServicio();
             this.cliente = c;
+            esEdicion = true;
         }
 
         private void FrmDetalleCliente_Load(object sender, EventArgs e)
@@ -62,17 +67,28 @@ namespace Mayorista.Presentacion
         {
             if(Validar())
             {
-                Cliente c = new Cliente();
-                c.Id_tipo_documento = (TipoDoc)cboTipoDoc.SelectedItem;
-                c.Nro_documento = txtNroDoc.Text;
-                c.Nombre = txtNombre.Text;
-                c.Apellido = txtApellido.Text;
-                c.Email = txtEmail.Text;
-                c.Telefono = txtTelefono.Text;
+                if(!esEdicion)
+                {
+                    cliente = new Cliente();
+                }
+                cliente.Id_tipo_documento = (TipoDoc)cboTipoDoc.SelectedItem;
+                cliente.Nro_documento = txtNroDoc.Text;
+                cliente.Nombre = txtNombre.Text;
+                cliente.Apellido = txtApellido.Text;
+                cliente.Email = txtEmail.Text;
+                cliente.Telefono = txtTelefono.Text;
 
-                if (servicio.GuardarCliente(c))
-                    MessageBox.Show("Cliente registrado.");
-                this.Dispose();
+                if(esEdicion)
+                {
+                    if (servicio.EditarCliente(cliente))
+                    MessageBox.Show("Cliente actualizado");
+                }
+                else
+                {
+                    if (servicio.GuardarCliente(cliente))
+                        MessageBox.Show("Cliente registrado.");
+                }
+                    this.Dispose();
             }
         }
 

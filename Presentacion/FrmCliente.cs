@@ -53,7 +53,7 @@ namespace Mayorista.Presentacion
 
             foreach (DireccionCliente d in lista)
             {
-                dgvDomicilios.Rows.Add(d.Direccion, d.Codigo_postal);
+                dgvDomicilios.Rows.Add(d.Id_direccion_cliente, d.Direccion, d.Codigo_postal);
             }
         }
 
@@ -103,6 +103,24 @@ namespace Mayorista.Presentacion
 
             FrmDetalleCliente fdc = new FrmDetalleCliente(c);
             fdc.ShowDialog();
+        }
+
+        private void btnEditarDom_Click(object sender, EventArgs e)
+        {
+            if (dgvDomicilios.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un domicilio para editarlo.");
+                return;
+            }
+
+            int idDom = (int)dgvDomicilios.CurrentRow.Cells["ColumnIdDom"].Value;
+            string nombre = (string)dgvClientes.CurrentRow.Cells["ColumnNombre"].Value;
+            string apellido = (string)dgvClientes.CurrentRow.Cells["ColumnApellido"].Value;
+
+            DireccionCliente d = servicio.TraerDomicilioPorId(idDom);
+
+            FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(d, $"{nombre} {apellido}");
+            fdd.ShowDialog();
         }
     }
 }
