@@ -291,5 +291,25 @@ namespace Mayorista.Datos
 
             return db.ActualizarBD(consulta, lista) > 0;
         }
+
+        internal bool EliminarCliente(int id)
+        {
+            string consulta = "DELETE FROM clientes WHERE id_cliente = @idCliente";
+
+            List<Parametro> lista = new List<Parametro>();
+            lista.Add(new Parametro("@idCliente", id));
+
+            return db.ActualizarBD(consulta, lista) > 0;
+        }
+
+        internal bool EliminarDomicilio(int id)
+        {
+            string consulta = "DELETE FROM direcciones_clientes WHERE id_direccion_cliente = @idDireccion";
+
+            List<Parametro> lista = new List<Parametro>();
+            lista.Add(new Parametro("@idDireccion", id));
+
+            return db.ActualizarBD(consulta, lista) > 0;
+        }
     }
 }

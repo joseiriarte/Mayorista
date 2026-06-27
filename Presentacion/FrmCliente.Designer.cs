@@ -83,6 +83,7 @@
             this.btnEliminarDom.TabIndex = 10;
             this.btnEliminarDom.Text = "Eliminar";
             this.btnEliminarDom.UseVisualStyleBackColor = true;
+            this.btnEliminarDom.Click += new System.EventHandler(this.btnEliminarDom_Click);
             // 
             // btnEditarDom
             // 
@@ -112,6 +113,7 @@
             this.btnEliminarCl.TabIndex = 8;
             this.btnEliminarCl.Text = "Eliminar";
             this.btnEliminarCl.UseVisualStyleBackColor = true;
+            this.btnEliminarCl.Click += new System.EventHandler(this.btnEliminarCl_Click);
             // 
             // btnEditarCl
             // 

@@ -83,5 +83,15 @@ namespace Mayorista.Negocio
         {
             return dao.ActualizarDomicilio(domicilio);
         }
+
+        internal bool EliminarCliente(int id)
+        {
+            return dao.EliminarCliente(id);
+        }
+
+        internal bool EliminarDomicilio(int id)
+        {
+            return dao.EliminarDomicilio(id);
+        }
     }
 }

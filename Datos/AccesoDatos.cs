@@ -16,14 +16,14 @@ namespace Mayorista.Datos
 
         //"Data Source= localhost\\SQLEXPRESS01;Initial Catalog=TUP_PI_1w1_TPI_G18_Mayorista_Fiambres_Lacteos;Integrated Security=True";
 
-
         private SqlConnection conexion;
         private SqlCommand comando;
-        private SqlDataReader lector;
+
         public AccesoDatos()
         {
             conexion = new SqlConnection(CadenaConexion);
         }
+
         private void Conectar()
         {
             conexion.Open();
@@ -31,50 +31,89 @@ namespace Mayorista.Datos
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
         }
+
         public void Desconectar()
         {
-            conexion.Close();
+            if (conexion.State == ConnectionState.Open)
+                conexion.Close();
         }
+
         public DataTable ConsultarTabla(string nombreTabla)
         {
             DataTable tabla = new DataTable();
-            this.Conectar();
-            comando.CommandText = "SELECT * FROM " + nombreTabla;
-            tabla.Load(comando.ExecuteReader());
-            this.Desconectar();
-            return tabla;
+
+            try
+            {
+                Conectar();
+
+                comando.CommandText = "SELECT * FROM " + nombreTabla;
+
+                tabla.Load(comando.ExecuteReader());
+
+                return tabla;
+            }
+            finally
+            {
+                Desconectar();
+            }
         }
+
         public DataTable ConsultarBD(string consultaSQL)
         {
             DataTable tabla = new DataTable();
-            this.Conectar();
-            comando.CommandText = consultaSQL;
-            tabla.Load(comando.ExecuteReader());
-            this.Desconectar();
-            return tabla;
-        }
-        public int ActualizarBD(string consultaSQL)
-        {
-            int filasAfectadas = 0;
-            this.Conectar();
-            comando.CommandText = consultaSQL;
-            filasAfectadas = comando.ExecuteNonQuery();
-            this.Desconectar();
-            return filasAfectadas;
-        }
-        public int ActualizarBD(string consultaSQL, List<Parametro> lista)
-        {
-            int filasAfectadas = 0;
-            this.Conectar();
-            comando.CommandText = consultaSQL;
-            foreach (Parametro p in lista)
+
+            try
             {
-                comando.Parameters.AddWithValue(p.Nombre, p.Valor);
+                Conectar();
+
+                comando.CommandText = consultaSQL;
+
+                tabla.Load(comando.ExecuteReader());
+
+                return tabla;
             }
-            filasAfectadas = comando.ExecuteNonQuery();
-            this.Desconectar();
-            return filasAfectadas;
+            finally
+            {
+                Desconectar();
+            }
         }
 
+        public int ActualizarBD(string consultaSQL)
+        {
+            try
+            {
+                Conectar();
+
+                comando.CommandText = consultaSQL;
+
+                return comando.ExecuteNonQuery();
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
+        public int ActualizarBD(string consultaSQL, List<Parametro> lista)
+        {
+            try
+            {
+                Conectar();
+
+                comando.Parameters.Clear();
+                comando.CommandText = consultaSQL;
+
+                foreach (Parametro p in lista)
+                {
+                    comando.Parameters.AddWithValue(p.Nombre, p.Valor);
+                }
+
+                return comando.ExecuteNonQuery();
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
     }
 }

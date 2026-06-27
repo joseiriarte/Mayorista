@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -121,6 +122,74 @@ namespace Mayorista.Presentacion
 
             FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(d, $"{nombre} {apellido}");
             fdd.ShowDialog();
+        }
+
+        private void btnEliminarCl_Click(object sender, EventArgs e)
+        {
+            if (dgvDomicilios.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un cliente para eliminarlo.");
+                return;
+            }
+
+            int id = (int)dgvClientes.CurrentRow.Cells["ColumnNumero"].Value;
+
+            DialogResult r = MessageBox.Show(
+                "¿Está seguro de eliminar el cliente?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2);
+
+            if (r == DialogResult.Yes)
+            {
+                try
+                {
+                    if (servicio.EliminarCliente(id))
+                    {
+                        MessageBox.Show("Cliente eliminado.");
+                        btnBuscarCliente.PerformClick();
+                    }
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("No se puede eliminar el cliente porque está asociado a uno o más registros.");
+                }
+            }
+        }
+
+        private void btnEliminarDom_Click(object sender, EventArgs e)
+        {
+            if (dgvDomicilios.Rows.Count == 0)
+            {
+                MessageBox.Show("Seleccione un domicilio para eliminarlo.");
+                return;
+            }
+
+            int id = (int)dgvDomicilios.CurrentRow.Cells["ColumnIdDom"].Value;
+
+            DialogResult r = MessageBox.Show(
+                "¿Está seguro de eliminar el domicilio?",
+                "Confirmar",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button2);
+
+            if (r == DialogResult.Yes)
+            {
+                try
+                {
+                    if (servicio.EliminarDomicilio(id))
+                    {
+                        MessageBox.Show("Domicilio eliminado.");
+                        btnBuscarCliente.PerformClick();
+                    }
+                }
+                catch (SqlException)
+                {
+                    MessageBox.Show("No se puede eliminar el domicilio porque está asociado a una o más facturas.");
+                }
+            }
         }
     }
 }
