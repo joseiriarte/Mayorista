@@ -36,7 +36,7 @@ namespace Mayorista.Presentacion
 
             foreach (Cliente c in lista)
             {
-                dgvClientes.Rows.Add(c.Id_cliente, c.Nombre, c.Apellido, c.Telefono);
+                dgvClientes.Rows.Add(c.IdCliente, c.Nombre, c.Apellido, c.Telefono);
             }
         }
 
@@ -54,7 +54,7 @@ namespace Mayorista.Presentacion
 
             foreach (DireccionCliente d in lista)
             {
-                dgvDomicilios.Rows.Add(d.Id_direccion_cliente, d.Direccion, d.Codigo_postal);
+                dgvDomicilios.Rows.Add(d.IdDireccionCliente, d.Direccion, d.CodigoPostal);
             }
         }
 
@@ -70,6 +70,7 @@ namespace Mayorista.Presentacion
         {
             FrmDetalleCliente fdc = new FrmDetalleCliente();
             fdc.ShowDialog();
+            btnBuscarCliente.PerformClick();
         }
 
         private void btnNuevoDom_Click(object sender, EventArgs e)
@@ -87,6 +88,7 @@ namespace Mayorista.Presentacion
 
             FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(idCliente, $"{nombre} {apellido}");
             fdd.ShowDialog();
+            btnBuscarCliente.PerformClick();
         }
 
         private void btnEditarCl_Click(object sender, EventArgs e)
@@ -104,6 +106,7 @@ namespace Mayorista.Presentacion
 
             FrmDetalleCliente fdc = new FrmDetalleCliente(c);
             fdc.ShowDialog();
+            btnBuscarCliente.PerformClick();
         }
 
         private void btnEditarDom_Click(object sender, EventArgs e)
@@ -122,11 +125,12 @@ namespace Mayorista.Presentacion
 
             FrmDetalleDomicilio fdd = new FrmDetalleDomicilio(d, $"{nombre} {apellido}");
             fdd.ShowDialog();
+            btnBuscarCliente.PerformClick();
         }
 
         private void btnEliminarCl_Click(object sender, EventArgs e)
         {
-            if (dgvDomicilios.Rows.Count == 0)
+            if (dgvClientes.Rows.Count == 0)
             {
                 MessageBox.Show("Seleccione un cliente para eliminarlo.");
                 return;

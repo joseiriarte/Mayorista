@@ -48,14 +48,14 @@ namespace Mayorista.Presentacion
             {
                 foreach (Barrio b in cboBarrio.Items)
                 {
-                    if (b.Id_barrio == domicilio.Id_barrio.Id_barrio)
+                    if (b.IdBarrio == domicilio.Barrio.IdBarrio)
                     {
                         cboBarrio.SelectedItem = b;
                         break;
                     }
                 }
                 txtDireccion.Text = domicilio.Direccion;
-                txtCP.Text = domicilio.Codigo_postal;
+                txtCP.Text = domicilio.CodigoPostal;
             }
         }
 
@@ -74,12 +74,12 @@ namespace Mayorista.Presentacion
                 if(!esEdicion)
                 {
                     domicilio = new DireccionCliente();
-                    domicilio.Id_cliente = idCliente;
+                    domicilio.IdCliente = idCliente;
                 }
                 
-                domicilio.Id_barrio = (Barrio)cboBarrio.SelectedItem;
+                domicilio.Barrio = (Barrio)cboBarrio.SelectedItem;
                 domicilio.Direccion = txtDireccion.Text;
-                domicilio.Codigo_postal = txtCP.Text;
+                domicilio.CodigoPostal = txtCP.Text;
 
                 if(esEdicion)
                 {

@@ -41,13 +41,13 @@ namespace Mayorista.Presentacion
             {
                 foreach (TipoDoc tipo in cboTipoDoc.Items)
                 {
-                    if (tipo.Id_tipo_documento == cliente.Id_tipo_documento.Id_tipo_documento)
+                    if (tipo.IdTipoDocumento == cliente.TipoDocumento.IdTipoDocumento)
                     {
                         cboTipoDoc.SelectedItem = tipo;
                         break;
                     }
                 }
-                txtNroDoc.Text = cliente.Nro_documento;
+                txtNroDoc.Text = cliente.NroDocumento;
                 txtNombre.Text = cliente.Nombre;
                 txtApellido.Text = cliente.Apellido;
                 txtEmail.Text = cliente.Email;
@@ -71,8 +71,8 @@ namespace Mayorista.Presentacion
                 {
                     cliente = new Cliente();
                 }
-                cliente.Id_tipo_documento = (TipoDoc)cboTipoDoc.SelectedItem;
-                cliente.Nro_documento = txtNroDoc.Text;
+                cliente.TipoDocumento = (TipoDoc)cboTipoDoc.SelectedItem;
+                cliente.NroDocumento = txtNroDoc.Text;
                 cliente.Nombre = txtNombre.Text;
                 cliente.Apellido = txtApellido.Text;
                 cliente.Email = txtEmail.Text;

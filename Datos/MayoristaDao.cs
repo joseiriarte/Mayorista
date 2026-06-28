@@ -21,8 +21,8 @@ namespace Mayorista.Datos
         {
             string consulta = "insert into clientes (id_tipo_documento, nro_documento, nombre, apellido, email, telefono) values (@idTipoDocumento, @nroDocumento, @nombre, @apellido, @email, @telefono)";
             List<Parametro> lista = new List<Parametro>();
-            lista.Add(new Parametro("@idTipoDocumento", c.Id_tipo_documento.Id_tipo_documento));
-            lista.Add(new Parametro("@nroDocumento", c.Nro_documento));
+            lista.Add(new Parametro("@idTipoDocumento", c.TipoDocumento.IdTipoDocumento));
+            lista.Add(new Parametro("@nroDocumento", c.NroDocumento));
             lista.Add(new Parametro("@nombre", c.Nombre));
             lista.Add(new Parametro("@apellido", c.Apellido));
             lista.Add(new Parametro("@email", c.Email));
@@ -35,10 +35,10 @@ namespace Mayorista.Datos
         {
             string consulta = "insert into direcciones_clientes (id_cliente, id_barrio, direccion, codigo_postal) values (@idCliente, @idBarrio, @direccion, @codigoPostal)";
             List<Parametro> lista = new List<Parametro>();
-            lista.Add(new Parametro("@idCliente", d.Id_cliente));
-            lista.Add(new Parametro("@idBarrio", d.Id_barrio.Id_barrio));
+            lista.Add(new Parametro("@idCliente", d.IdCliente));
+            lista.Add(new Parametro("@idBarrio", d.Barrio.IdBarrio));
             lista.Add(new Parametro("@direccion", d.Direccion));
-            lista.Add(new Parametro("@codigoPostal", d.Codigo_postal));
+            lista.Add(new Parametro("@codigoPostal", d.CodigoPostal));
 
             return db.ActualizarBD(consulta, lista) > 0;
         }
@@ -51,9 +51,9 @@ namespace Mayorista.Datos
             foreach (DataRow dr in dt.Rows)
             {
                 Barrio b = new Barrio();
-                b.Id_barrio = (int)dr[0];
-                b.Id_localidad = (int)dr[1];
-                b.Nombre_barrio = (string)dr[2];
+                b.IdBarrio = (int)dr[0];
+                b.IdLocalidad = (int)dr[1];
+                b.NombreBarrio = (string)dr[2];
 
                 listaBarrios.Add(b);
             }
@@ -197,8 +197,8 @@ namespace Mayorista.Datos
             foreach (DataRow dr in dt.Rows)
             {
                 TipoDoc t = new TipoDoc();
-                t.Id_tipo_documento = (int)dr[0];
-                t.Tipo_documento = (string)dr[1];
+                t.IdTipoDocumento = (int)dr[0];
+                t.TipoDocumento = (string)dr[1];
 
                 listaTiposDoc.Add(t);
             }
@@ -209,10 +209,10 @@ namespace Mayorista.Datos
         {
             Cliente c = new Cliente();
 
-            c.Id_cliente = (int)dr[0];
-            c.Id_tipo_documento = new TipoDoc();
-            c.Id_tipo_documento.Id_tipo_documento = (int)dr[1];
-            c.Nro_documento = (string)dr[2];
+            c.IdCliente = (int)dr[0];
+            c.TipoDocumento = new TipoDoc();
+            c.TipoDocumento.IdTipoDocumento = (int)dr[1];
+            c.NroDocumento = (string)dr[2];
             c.Nombre = (string)dr[3];
             c.Apellido = (string)dr[4];
             c.Email = (string)dr[5];
@@ -225,12 +225,12 @@ namespace Mayorista.Datos
         {
             DireccionCliente d = new DireccionCliente();
 
-            d.Id_direccion_cliente = (int)dr[0];
-            d.Id_cliente = (int)dr[1];
-            d.Id_barrio = new Barrio();
-            d.Id_barrio.Id_barrio = (int)dr[2];
+            d.IdDireccionCliente = (int)dr[0];
+            d.IdCliente = (int)dr[1];
+            d.Barrio = new Barrio();
+            d.Barrio.IdBarrio = (int)dr[2];
             d.Direccion = (string)dr[3];
-            d.Codigo_postal = (string)dr[4];
+            d.CodigoPostal = (string)dr[4];
             
             return d;
         }
@@ -248,13 +248,13 @@ namespace Mayorista.Datos
 
             List<Parametro> lista = new List<Parametro>();
 
-            lista.Add(new Parametro("@idTipoDocumento", c.Id_tipo_documento.Id_tipo_documento));
-            lista.Add(new Parametro("@nroDocumento", c.Nro_documento));
+            lista.Add(new Parametro("@idTipoDocumento", c.TipoDocumento.IdTipoDocumento));
+            lista.Add(new Parametro("@nroDocumento", c.NroDocumento));
             lista.Add(new Parametro("@nombre", c.Nombre));
             lista.Add(new Parametro("@apellido", c.Apellido));
             lista.Add(new Parametro("@email", c.Email));
             lista.Add(new Parametro("@telefono", c.Telefono));
-            lista.Add(new Parametro("@idCliente", c.Id_cliente));
+            lista.Add(new Parametro("@idCliente", c.IdCliente));
 
             return db.ActualizarBD(consulta, lista) > 0;
         }
@@ -283,11 +283,11 @@ namespace Mayorista.Datos
 
             List<Parametro> lista = new List<Parametro>();
 
-            lista.Add(new Parametro("@idCliente", d.Id_cliente));
-            lista.Add(new Parametro("@idBarrio", d.Id_barrio.Id_barrio));
+            lista.Add(new Parametro("@idCliente", d.IdCliente));
+            lista.Add(new Parametro("@idBarrio", d.Barrio.IdBarrio));
             lista.Add(new Parametro("@direccion", d.Direccion));
-            lista.Add(new Parametro("@codigoPostal", d.Codigo_postal));
-            lista.Add(new Parametro("@idDireccion", d.Id_direccion_cliente));
+            lista.Add(new Parametro("@codigoPostal", d.CodigoPostal));
+            lista.Add(new Parametro("@idDireccion", d.IdDireccionCliente));
 
             return db.ActualizarBD(consulta, lista) > 0;
         }

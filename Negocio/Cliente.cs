@@ -8,29 +8,29 @@ namespace Mayorista.Negocio
 {
     public class Cliente
     {
-        private int id_cliente;
-        private TipoDoc id_tipo_documento;
-        private string nro_documento;
+        private int idCliente;
+        private TipoDoc tipoDocumento;
+        private string nroDocumento;
         private string nombre;
         private string apellido;
         private string email;
         private string telefono;
 
-        public int Id_cliente
+        public int IdCliente
         {
-            get { return id_cliente; }
-            set { id_cliente = value; }
+            get { return idCliente; }
+            set { idCliente = value; }
         }
-        public TipoDoc Id_tipo_documento
+        public TipoDoc TipoDocumento
         {
-            get { return id_tipo_documento; }
-            set { id_tipo_documento = value; }
+            get { return tipoDocumento; }
+            set { tipoDocumento = value; }
         }
 
-        public string Nro_documento
+        public string NroDocumento
         {
-            get { return nro_documento; }
-            set { nro_documento = value; }
+            get { return nroDocumento; }
+            set { nroDocumento = value; }
         }
 
         public string Nombre

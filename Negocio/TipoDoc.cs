@@ -8,13 +8,13 @@ namespace Mayorista.Negocio
 {
     public class TipoDoc
     {
-        public int Id_tipo_documento { get; set; }
+        public int IdTipoDocumento { get; set; }
 
-        public string Tipo_documento { get; set; }
+        public string TipoDocumento { get; set; }
 
         public override string ToString()
         {
-            return Tipo_documento;
+            return TipoDocumento;
         }
     }
 }
