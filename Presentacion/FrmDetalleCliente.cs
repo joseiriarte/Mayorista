@@ -16,7 +16,6 @@ namespace Mayorista.Presentacion
         MayoristaServicio servicio;
         private Cliente cliente;
         private bool esEdicion;
-        private bool esEliminacion;
 
         public FrmDetalleCliente()
         {
@@ -101,7 +100,12 @@ namespace Mayorista.Presentacion
             }
             if(string.IsNullOrEmpty(txtNroDoc.Text))
             {
-                MessageBox.Show("Ingrese un numero de documento.");
+                MessageBox.Show("Ingrese un número de documento.");
+                return false;
+            }
+            if (!int.TryParse(txtNroDoc.Text, out _))
+            {
+                MessageBox.Show("Ingrese un número de documento válido.");
                 return false;
             }
             if (string.IsNullOrEmpty(txtNombre.Text))
@@ -109,19 +113,45 @@ namespace Mayorista.Presentacion
                 MessageBox.Show("Ingrese un nombre.");
                 return false;
             }
+            foreach (char c in txtNombre.Text)
+            {
+                if (!char.IsLetter(c) && c != ' ')
+                {
+                    MessageBox.Show("Ingrese un nombre válido.");
+                    return false;
+                }
+            }
             if (string.IsNullOrEmpty(txtApellido.Text))
             {
                 MessageBox.Show("Ingrese un apellido.");
                 return false;
+            }
+            foreach (char c in txtApellido.Text)
+            {
+                if (!char.IsLetter(c) && c != ' ')
+                {
+                    MessageBox.Show("Ingrese un apellido válido.");
+                    return false;
+                }
             }
             if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 MessageBox.Show("Ingrese un email.");
                 return false;
             }
+            if (!txtEmail.Text.Contains("@"))
+            {
+                MessageBox.Show("Ingrese un email válido.");
+                return false;
+            }
             if (string.IsNullOrEmpty(txtTelefono.Text))
             {
-                MessageBox.Show("Ingrese un numero de teléfono.");
+                MessageBox.Show("Ingrese un número de teléfono.");
+                return false;
+            }
+            if (!long.TryParse(txtTelefono.Text, out _))
+            {
+                MessageBox.Show("Ingrese un número de teléfono válido.");
                 return false;
             }
             return true;

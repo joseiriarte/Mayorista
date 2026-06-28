@@ -17,7 +17,6 @@ namespace Mayorista.Presentacion
         private int idCliente;
         private DireccionCliente domicilio;
         private bool esEdicion;
-        private bool esEliminacion;
 
         public FrmDetalleDomicilio(int idCliente, string nombreCliente)
         {
