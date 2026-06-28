@@ -54,7 +54,7 @@ namespace Mayorista.Presentacion
 
             foreach (DireccionCliente d in lista)
             {
-                dgvDomicilios.Rows.Add(d.IdDireccionCliente, d.Direccion, d.CodigoPostal);
+                dgvDomicilios.Rows.Add(d.IdDireccionCliente, d.CodigoPostal, d.Direccion);
             }
         }
 

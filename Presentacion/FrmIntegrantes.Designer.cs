@@ -47,9 +47,9 @@
             this.lblNombresI.AutoSize = true;
             this.lblNombresI.Location = new System.Drawing.Point(85, 28);
             this.lblNombresI.Name = "lblNombresI";
-            this.lblNombresI.Size = new System.Drawing.Size(91, 13);
+            this.lblNombresI.Size = new System.Drawing.Size(90, 13);
             this.lblNombresI.TabIndex = 0;
-            this.lblNombresI.Text = "Nombre y apellido";
+            this.lblNombresI.Text = "Apellido y nombre";
             // 
             // lblLegajosI
             // 
