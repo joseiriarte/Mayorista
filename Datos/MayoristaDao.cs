@@ -63,18 +63,26 @@ namespace Mayorista.Datos
         internal List<Cliente> RecuperarClientes(string filtro)
         {
             List<Cliente> listaClientes = new List<Cliente>();
-            
-            string consultaSQL = "select * from clientes c";
 
-            if (!string.IsNullOrEmpty(filtro))
+            string consultaSQL = "select * from clientes";
+
+            List<Parametro> parametros = new List<Parametro>();
+
+            if (!string.IsNullOrWhiteSpace(filtro))
             {
-                consultaSQL += " where c.nombre + ' ' + c.apellido like '%" + filtro + "%'";
+                consultaSQL += " where nombre + ' ' + apellido LIKE @filtro";
+                parametros.Add(new Parametro("@filtro", "%" + filtro + "%"));
             }
-            DataTable tabla = db.ConsultarBD(consultaSQL);
+
+            DataTable tabla = parametros.Count > 0
+                ? db.ConsultarBD(consultaSQL, parametros)
+                : db.ConsultarBD(consultaSQL);
+
             foreach (DataRow fila in tabla.Rows)
             {
                 listaClientes.Add(CrearCliente(fila));
             }
+
             return listaClientes;
         }
 

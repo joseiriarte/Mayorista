@@ -78,6 +78,32 @@ namespace Mayorista.Datos
             }
         }
 
+        public DataTable ConsultarBD(string consultaSQL, List<Parametro> lista)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Conectar();
+
+                comando.Parameters.Clear();
+                comando.CommandText = consultaSQL;
+
+                foreach (Parametro p in lista)
+                {
+                    comando.Parameters.AddWithValue(p.Nombre, p.Valor);
+                }
+
+                tabla.Load(comando.ExecuteReader());
+
+                return tabla;
+            }
+            finally
+            {
+                Desconectar();
+            }
+        }
+
         public int ActualizarBD(string consultaSQL)
         {
             try
