@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta1));
             this.dgvConsultas = new System.Windows.Forms.DataGridView();
-            this.btnCon1 = new System.Windows.Forms.Button();
-            this.lblCon1 = new System.Windows.Forms.Label();
-            this.btnSalirCon1 = new System.Windows.Forms.Button();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnPromedio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnCantidadTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCon1 = new System.Windows.Forms.Button();
+            this.lblCon1 = new System.Windows.Forms.Label();
+            this.btnSalirCon1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +55,34 @@
             this.dgvConsultas.ReadOnly = true;
             this.dgvConsultas.Size = new System.Drawing.Size(789, 227);
             this.dgvConsultas.TabIndex = 0;
+            // 
+            // ColumnNombre
+            // 
+            this.ColumnNombre.HeaderText = "Nombre completo";
+            this.ColumnNombre.Name = "ColumnNombre";
+            this.ColumnNombre.ReadOnly = true;
+            this.ColumnNombre.Width = 150;
+            // 
+            // ColumnTotal
+            // 
+            this.ColumnTotal.HeaderText = "Total facturado";
+            this.ColumnTotal.Name = "ColumnTotal";
+            this.ColumnTotal.ReadOnly = true;
+            this.ColumnTotal.Width = 180;
+            // 
+            // ColumnPromedio
+            // 
+            this.ColumnPromedio.HeaderText = "Promedio facturado";
+            this.ColumnPromedio.Name = "ColumnPromedio";
+            this.ColumnPromedio.ReadOnly = true;
+            this.ColumnPromedio.Width = 180;
+            // 
+            // ColumnCantidadTotal
+            // 
+            this.ColumnCantidadTotal.HeaderText = "Cantidad total de articulos vendidos";
+            this.ColumnCantidadTotal.Name = "ColumnCantidadTotal";
+            this.ColumnCantidadTotal.ReadOnly = true;
+            this.ColumnCantidadTotal.Width = 220;
             // 
             // btnCon1
             // 
@@ -85,34 +113,6 @@
             this.btnSalirCon1.UseVisualStyleBackColor = true;
             this.btnSalirCon1.Click += new System.EventHandler(this.btnSalirCon1_Click);
             // 
-            // ColumnNombre
-            // 
-            this.ColumnNombre.HeaderText = "Nombre completo";
-            this.ColumnNombre.Name = "ColumnNombre";
-            this.ColumnNombre.ReadOnly = true;
-            this.ColumnNombre.Width = 150;
-            // 
-            // ColumnTotal
-            // 
-            this.ColumnTotal.HeaderText = "Total facturado";
-            this.ColumnTotal.Name = "ColumnTotal";
-            this.ColumnTotal.ReadOnly = true;
-            this.ColumnTotal.Width = 180;
-            // 
-            // ColumnPromedio
-            // 
-            this.ColumnPromedio.HeaderText = "Promedio facturado";
-            this.ColumnPromedio.Name = "ColumnPromedio";
-            this.ColumnPromedio.ReadOnly = true;
-            this.ColumnPromedio.Width = 180;
-            // 
-            // ColumnCantidadTotal
-            // 
-            this.ColumnCantidadTotal.HeaderText = "Cantidad total de articulos vendidos";
-            this.ColumnCantidadTotal.Name = "ColumnCantidadTotal";
-            this.ColumnCantidadTotal.ReadOnly = true;
-            this.ColumnCantidadTotal.Width = 220;
-            // 
             // FrmConsulta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -122,7 +122,6 @@
             this.Controls.Add(this.lblCon1);
             this.Controls.Add(this.btnCon1);
             this.Controls.Add(this.dgvConsultas);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsulta1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consultas";

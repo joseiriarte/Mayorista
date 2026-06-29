@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMayorista));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -36,11 +35,11 @@
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulta1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulta2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulta3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consulta4ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,6 +106,34 @@
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
+            // consulta1ToolStripMenuItem
+            // 
+            this.consulta1ToolStripMenuItem.Name = "consulta1ToolStripMenuItem";
+            this.consulta1ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.consulta1ToolStripMenuItem.Text = "Consulta 1";
+            this.consulta1ToolStripMenuItem.Click += new System.EventHandler(this.consulta1ToolStripMenuItem_Click);
+            // 
+            // consulta2ToolStripMenuItem
+            // 
+            this.consulta2ToolStripMenuItem.Name = "consulta2ToolStripMenuItem";
+            this.consulta2ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.consulta2ToolStripMenuItem.Text = "Consulta 2";
+            this.consulta2ToolStripMenuItem.Click += new System.EventHandler(this.consulta2ToolStripMenuItem_Click);
+            // 
+            // consulta3ToolStripMenuItem
+            // 
+            this.consulta3ToolStripMenuItem.Name = "consulta3ToolStripMenuItem";
+            this.consulta3ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.consulta3ToolStripMenuItem.Text = "Consulta 3";
+            this.consulta3ToolStripMenuItem.Click += new System.EventHandler(this.consulta3ToolStripMenuItem_Click);
+            // 
+            // consulta4ToolStripMenuItem
+            // 
+            this.consulta4ToolStripMenuItem.Name = "consulta4ToolStripMenuItem";
+            this.consulta4ToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.consulta4ToolStripMenuItem.Text = "Consulta 4";
+            this.consulta4ToolStripMenuItem.Click += new System.EventHandler(this.consulta4ToolStripMenuItem_Click);
+            // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
@@ -114,46 +141,16 @@
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
-            // consulta1ToolStripMenuItem
-            // 
-            this.consulta1ToolStripMenuItem.Name = "consulta1ToolStripMenuItem";
-            this.consulta1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consulta1ToolStripMenuItem.Text = "Consulta 1";
-            this.consulta1ToolStripMenuItem.Click += new System.EventHandler(this.consulta1ToolStripMenuItem_Click);
-            // 
-            // consulta2ToolStripMenuItem
-            // 
-            this.consulta2ToolStripMenuItem.Name = "consulta2ToolStripMenuItem";
-            this.consulta2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consulta2ToolStripMenuItem.Text = "Consulta 2";
-            this.consulta2ToolStripMenuItem.Click += new System.EventHandler(this.consulta2ToolStripMenuItem_Click);
-            // 
-            // consulta3ToolStripMenuItem
-            // 
-            this.consulta3ToolStripMenuItem.Name = "consulta3ToolStripMenuItem";
-            this.consulta3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consulta3ToolStripMenuItem.Text = "Consulta 3";
-            this.consulta3ToolStripMenuItem.Click += new System.EventHandler(this.consulta3ToolStripMenuItem_Click);
-            // 
-            // consulta4ToolStripMenuItem
-            // 
-            this.consulta4ToolStripMenuItem.Name = "consulta4ToolStripMenuItem";
-            this.consulta4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consulta4ToolStripMenuItem.Text = "Consulta 4";
-            this.consulta4ToolStripMenuItem.Click += new System.EventHandler(this.consulta4ToolStripMenuItem_Click);
-            // 
             // FrmMayorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1370, 747);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.DoubleBuffered = true;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FrmMayorista";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

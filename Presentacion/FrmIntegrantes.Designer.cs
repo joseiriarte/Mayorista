@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIntegrantes));
             this.lblNombresI = new System.Windows.Forms.Label();
             this.lblLegajosI = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -158,7 +157,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblLegajosI);
             this.Controls.Add(this.lblNombresI);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmIntegrantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acerca de";

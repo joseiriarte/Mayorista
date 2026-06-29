@@ -122,7 +122,6 @@
             this.Controls.Add(this.lblCon4);
             this.Controls.Add(this.btnCon4);
             this.Controls.Add(this.dgvConsultas4);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsulta4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmConsulta4";

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmConsulta2));
             this.btnSalirCon2 = new System.Windows.Forms.Button();
             this.lblCon2 = new System.Windows.Forms.Label();
             this.btnCon2 = new System.Windows.Forms.Button();
@@ -123,7 +122,6 @@
             this.Controls.Add(this.lblCon2);
             this.Controls.Add(this.btnCon2);
             this.Controls.Add(this.dgvConsultas2);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmConsulta2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Consulta2";
