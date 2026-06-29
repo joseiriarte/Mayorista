@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
             this.gbCliente = new System.Windows.Forms.GroupBox();
             this.btnEliminarDom = new System.Windows.Forms.Button();
             this.btnEditarDom = new System.Windows.Forms.Button();
@@ -38,6 +37,9 @@
             this.btnNuevoCl = new System.Windows.Forms.Button();
             this.lblDomicilios = new System.Windows.Forms.Label();
             this.dgvDomicilios = new System.Windows.Forms.DataGridView();
+            this.ColumnIdDom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.ColumnNumero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnNombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,9 +49,6 @@
             this.txtCliente = new System.Windows.Forms.TextBox();
             this.lblCliente = new System.Windows.Forms.Label();
             this.btnAtras = new System.Windows.Forms.Button();
-            this.ColumnIdDom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnCP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ColumnDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDomicilios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -160,6 +159,25 @@
             this.dgvDomicilios.Size = new System.Drawing.Size(464, 150);
             this.dgvDomicilios.TabIndex = 4;
             // 
+            // ColumnIdDom
+            // 
+            this.ColumnIdDom.HeaderText = "Id";
+            this.ColumnIdDom.Name = "ColumnIdDom";
+            this.ColumnIdDom.ReadOnly = true;
+            // 
+            // ColumnCP
+            // 
+            this.ColumnCP.HeaderText = "Código Postal";
+            this.ColumnCP.Name = "ColumnCP";
+            this.ColumnCP.ReadOnly = true;
+            // 
+            // ColumnDireccion
+            // 
+            this.ColumnDireccion.HeaderText = "Dirección";
+            this.ColumnDireccion.Name = "ColumnDireccion";
+            this.ColumnDireccion.ReadOnly = true;
+            this.ColumnDireccion.Width = 300;
+            // 
             // dgvClientes
             // 
             this.dgvClientes.AllowUserToAddRows = false;
@@ -240,25 +258,6 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // ColumnIdDom
-            // 
-            this.ColumnIdDom.HeaderText = "Id";
-            this.ColumnIdDom.Name = "ColumnIdDom";
-            this.ColumnIdDom.ReadOnly = true;
-            // 
-            // ColumnCP
-            // 
-            this.ColumnCP.HeaderText = "Código Postal";
-            this.ColumnCP.Name = "ColumnCP";
-            this.ColumnCP.ReadOnly = true;
-            // 
-            // ColumnDireccion
-            // 
-            this.ColumnDireccion.HeaderText = "Dirección";
-            this.ColumnDireccion.Name = "ColumnDireccion";
-            this.ColumnDireccion.ReadOnly = true;
-            this.ColumnDireccion.Width = 300;
-            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,7 +266,6 @@
             this.ClientSize = new System.Drawing.Size(661, 693);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.gbCliente);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
